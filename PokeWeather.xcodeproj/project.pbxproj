@@ -13,6 +13,8 @@
 		4F45271B25E5743600F75C23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F45271925E5743600F75C23 /* Main.storyboard */; };
 		4F45271D25E5743700F75C23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F45271C25E5743700F75C23 /* Assets.xcassets */; };
 		4F45272025E5743700F75C23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F45271E25E5743700F75C23 /* LaunchScreen.storyboard */; };
+		83F71A6C25E57AAB002A49BF /* PokeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F71A6B25E57AAB002A49BF /* PokeResponse.swift */; };
+		83F71A6F25E58400002A49BF /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F71A6E25E58400002A49BF /* WeatherResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		4F45271C25E5743700F75C23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F45271F25E5743700F75C23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F45272125E5743700F75C23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83F71A6B25E57AAB002A49BF /* PokeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeResponse.swift; sourceTree = "<group>"; };
+		83F71A6E25E58400002A49BF /* WeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,9 +63,11 @@
 				4F45271325E5743600F75C23 /* AppDelegate.swift */,
 				4F45271525E5743600F75C23 /* SceneDelegate.swift */,
 				4F45271725E5743600F75C23 /* ViewController.swift */,
+				83F71A6B25E57AAB002A49BF /* PokeResponse.swift */,
 				4F45271925E5743600F75C23 /* Main.storyboard */,
 				4F45271C25E5743700F75C23 /* Assets.xcassets */,
 				4F45271E25E5743700F75C23 /* LaunchScreen.storyboard */,
+				83F71A6E25E58400002A49BF /* WeatherResponse.swift */,
 				4F45272125E5743700F75C23 /* Info.plist */,
 			);
 			path = PokeWeather;
@@ -138,8 +144,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F45271825E5743600F75C23 /* ViewController.swift in Sources */,
+				83F71A6F25E58400002A49BF /* WeatherResponse.swift in Sources */,
 				4F45271425E5743600F75C23 /* AppDelegate.swift in Sources */,
 				4F45271625E5743600F75C23 /* SceneDelegate.swift in Sources */,
+				83F71A6C25E57AAB002A49BF /* PokeResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
