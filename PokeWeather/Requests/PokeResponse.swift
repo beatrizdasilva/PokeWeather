@@ -7,11 +7,25 @@
 
 import Foundation
 
+
+
 struct Species: Codable {
     let name: String
 }
 
 struct Sprites: Codable {
+    let other: Other
+}
+
+struct Other: Codable {
+    let officialArtwork: OfficialArtwork
+    
+    enum CodingKeys: String, CodingKey {
+        case officialArtwork = "official-artwork"
+    }
+}
+
+struct OfficialArtwork: Codable{
     let front_default: String
 }
 
