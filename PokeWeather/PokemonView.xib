@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PokemonView" customModule="PokeWeather" customModuleProvider="target">
+            <connections>
+                <outlet property="advantageLabel" destination="7vI-IQ-bhl" id="Q6y-Qa-Adf"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="1q7-zQ-ghB"/>
+                <outlet property="pokemonImage" destination="dV7-o0-rbS" id="dYl-iY-6WN"/>
+                <outlet property="pokemonName" destination="nqh-H2-VZT" id="rSC-th-Xmz"/>
+                <outlet property="statusLabel" destination="4DD-Lp-GGf" id="ZbP-sZ-IZT"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="319" height="329"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dV7-o0-rbS" userLabel="pokemonImage">
+                    <rect key="frame" x="59" y="-102" width="200" height="200"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HWZ-iE-6Od">
+                    <rect key="frame" x="120.5" y="116.5" width="78.5" height="37.5"/>
+                    <subviews>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqh-H2-VZT" userLabel="pokemonName">
+                            <rect key="frame" x="0.0" y="0.0" width="48" height="37.5"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Y0a-as-YnS" userLabel="statusImage">
+                            <rect key="frame" x="58" y="-1.5" width="20.5" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageReference key="image" image="arrow.up" catalog="system" symbolScale="large"/>
+                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                        </imageView>
+                    </subviews>
+                </stackView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="middleTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4DD-Lp-GGf" userLabel="statusLabel">
+                    <rect key="frame" x="137.5" y="192" width="44.5" height="21"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7vI-IQ-bhl" userLabel="advantageLabel">
+                    <rect key="frame" x="137.5" y="244" width="44.5" height="21"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="HWZ-iE-6Od" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="9g7-Nm-P3A"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="4DD-Lp-GGf" secondAttribute="bottom" constant="116" id="Ao6-jQ-WIh"/>
+                <constraint firstItem="4DD-Lp-GGf" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="BcV-ed-lxT"/>
+                <constraint firstItem="7vI-IQ-bhl" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="J4H-km-Lch"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="7vI-IQ-bhl" secondAttribute="bottom" constant="64" id="LCp-2D-6CG"/>
+                <constraint firstItem="4DD-Lp-GGf" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="XpQ-K6-Hwk"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="HWZ-iE-6Od" secondAttribute="bottom" constant="175" id="nx2-cx-sdR"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-425.36231884057975" y="183.81696428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow.up" catalog="system" width="120" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
