@@ -59,7 +59,7 @@ class HomeViewController: UIViewController {
     }
     
     func requestData(pokeNumber: Int) {
-        if let url = URL(string: "https://pokeapi.co/api/v2/pokemon/charizard") {
+        if let url = URL(string: "https://pokeapi.co/api/v2/pokemon/seel") {
             URLSession.shared.dataTask(with: url) { [self] data, response, error in
                 if let data = data {
                     do {
