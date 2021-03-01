@@ -26,7 +26,7 @@ class HomeViewController: UIViewController {
         requestData(pokeNumber: Int.random(in: 1...150))
         
         self.navigationController?.navigationBar.isHidden = true
-        self.tabBarController?.tabBar.isTranslucent = false
+        self.tabBarController?.tabBar.isTranslucent = true
         self.tabBarController?.tabBar.backgroundColor = .white
         pokemonCard.layer.cornerRadius = pokemonCard.frame.height / 2
         
