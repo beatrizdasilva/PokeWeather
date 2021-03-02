@@ -9,7 +9,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="pFz-8M-YON">
             <objects>
-                <tabBarController id="TIk-CG-6AN" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="NavigationStoryboard" modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="TIk-CG-6AN" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="J9C-R7-F7D">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -27,7 +27,7 @@
         <!--Home-->
         <scene sceneID="zvZ-V2-mZE">
             <objects>
-                <viewControllerPlaceholder storyboardName="Home" id="SNP-K4-JyS" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="HomeStoryboard" storyboardName="Home" id="SNP-K4-JyS" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="zmu-9i-K4F"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UJI-3q-Mve" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -42,7 +42,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ye2-hz-mZ2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-41" y="164"/>
+            <point key="canvasLocation" x="-70" y="161"/>
         </scene>
     </scenes>
 </document>

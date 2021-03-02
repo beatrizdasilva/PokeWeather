@@ -7,8 +7,13 @@
 
 import UIKit
 import SpriteKit
+import CoreData
 
 class HomeViewController: UIViewController {
+    
+    var pokemonData: [Pokemon]?
+    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
 //    @IBOutlet weak var imagem: UIImageView!
 //    @IBOutlet weak var nome: UILabel!
@@ -23,15 +28,37 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
 
-        requestData(pokeNumber: Int.random(in: 1...150))
+//        requestData(pokeNumber: Int.random(in: 1...150))
         
         self.navigationController?.navigationBar.isHidden = true
-        self.tabBarController?.tabBar.isTranslucent = false
+        self.tabBarController?.tabBar.isTranslucent = true
         self.tabBarController?.tabBar.backgroundColor = .white
         pokemonCard.layer.cornerRadius = pokemonCard.frame.height / 2
         
         setupParticles()
         initSKScene()
+    }
+    
+    @IBAction func fromCoreData(_ sender: Any) {
+        do {
+            let request = Pokemon.fetchRequest() as NSFetchRequest<Pokemon>
+            
+            //set filtering
+//            let pred = NSPredicate(format: "name CONTAINS 'Ayaya'")
+//            request.predicate = pred
+            
+            self.pokemonData = try context.fetch(request)
+            
+            DispatchQueue.main.async { [self] in
+                let pokemon = pokemonData![0]
+                self.pokemonCard.pokemonImage.image = UIImage(data: pokemon.sprite!)
+                self.pokemonCard.pokemonName.text = pokemon.name
+                self.pokemonCard.statusLabel.text = "main: \(pokemon.mainType!.name!), secondary: \(pokemon.secondaryType ?? "batata")"
+                self.pokemonCard.advantageLabel.text = "\(pokemon.mainType!.strength![0])"
+            }
+        } catch {
+            print(error)
+        }
     }
     
     private func setupParticles(){
@@ -59,7 +86,7 @@ class HomeViewController: UIViewController {
     }
     
     func requestData(pokeNumber: Int) {
-        if let url = URL(string: "https://pokeapi.co/api/v2/pokemon/seel") {
+        if let url = URL(string: "https://pokeapi.co/api/v2/pokemon/umbreon") {
             URLSession.shared.dataTask(with: url) { [self] data, response, error in
                 if let data = data {
                     do {

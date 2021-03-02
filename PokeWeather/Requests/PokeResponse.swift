@@ -42,6 +42,7 @@ struct PokeResponse: Codable {
     let sprites: Sprites
     let types: [Types]
     let weight: Int
+    let id: Int
 }
 
 
