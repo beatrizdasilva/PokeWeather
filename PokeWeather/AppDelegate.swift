@@ -10,33 +10,11 @@ import CoreData
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    var window: UIWindow?
     
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         preloadPokemonTypeData()
-        
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        
-        var storyboard = UIStoryboard(name: "Home", bundle: nil)
-        var vc: UIViewController?
-        
-        let ud = UserDefaults.standard.bool(forKey: "AcessoPrimeiraVez")
-        
-//        if ud == false {
-//            print("first time")
-            vc = storyboard.instantiateInitialViewController()
-//        }
-//
-//        if ud == true {
-//            print("not the firstTime")
-//            storyboard = UIStoryboard(name: "Navigation", bundle: nil)
-//            vc = storyboard.instantiateInitialViewController()
-//        }
-        
-        self.window?.rootViewController = vc
-        self.window?.makeKeyAndVisible()
         
         return true
     }

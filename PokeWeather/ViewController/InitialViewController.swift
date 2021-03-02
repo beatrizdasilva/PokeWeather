@@ -9,7 +9,7 @@ import UIKit
 import CoreData
 
 class InitialViewController: UIViewController {
-
+    
     @IBOutlet var curvedCard: UIView!
     @IBOutlet weak var datePicker: UIDatePicker!
     
@@ -19,11 +19,14 @@ class InitialViewController: UIViewController {
     @IBOutlet weak var developerLabel: UILabel!
     @IBOutlet weak var creditsLabel: UILabel!
     
+    
     var types: [PokemonType]?
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,9 +34,27 @@ class InitialViewController: UIViewController {
         
         let defaults = UserDefaults.standard
         
+        
         setupUI()
+        
+        
         defaults.set(true, forKey: "AcessoPrimeiraVez") 
-
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        //        performSegue(withIdentifier: "Navigation", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.destination is UITabBarController  {
+            let vc = segue.destination as? UITabBarController
+        }
+    }
+    
+    @IBAction func mudarTela(_ sender: Any) {
+        performSegue(withIdentifier: "Navigation", sender: self)
     }
     
     func setupUI() {
@@ -41,24 +62,24 @@ class InitialViewController: UIViewController {
         let boldText = "Developed by: "
         let attrs = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 8)]
         let developerFinalLabel = NSMutableAttributedString(string:boldText, attributes:attrs)
-
+        
         let normalText = "Beatriz Silva, Juliana Machado e Kauê Sales"
         let normalString = NSMutableAttributedString(string:normalText)
-
+        
         developerFinalLabel.append(normalString)
         
         developerLabel.attributedText = developerFinalLabel
         
         let boldText2 = "Credits: "
         let creditsFinalLabel = NSMutableAttributedString(string:boldText2, attributes:attrs)
-
+        
         let normalText2 = "PokeAPI and Free Code Camp weather API"
         let normalString2 = NSMutableAttributedString(string:normalText2)
         
         creditsFinalLabel.append(normalString2)
         creditsLabel.attributedText = creditsFinalLabel
         creditsLabel.clipsToBounds = true
-
+        
         curvedCard.translatesAutoresizingMaskIntoConstraints = false
         curvedCard.topAnchor.constraint(equalTo: view.topAnchor, constant: -35).isActive = true
         curvedCard.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
@@ -69,10 +90,10 @@ class InitialViewController: UIViewController {
         
         randomDateButton.layer.cornerRadius = 20
         randomDateButton.layer.borderWidth = 2
-    //        continueButton.layer.backgroundColor = CGColor(red: 2/255, green: 188/255, blue: 173/255, alpha: 1.0)
+        //        continueButton.layer.backgroundColor = CGColor(red: 2/255, green: 188/255, blue: 173/255, alpha: 1.0)
         randomDateButton.layer.borderColor = CGColor(red: 3/255, green: 198/255, blue: 187/255, alpha: 1.0)
     }
-
+    
     @IBAction func randomDateButtonPressed(_ sender: Any) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "YY/M/d"
@@ -134,6 +155,8 @@ class InitialViewController: UIViewController {
         print(pokemonValues)
         
         
+        
+        
         requestPokemonData(value: String(pokemonValues[0]))
         requestPokemonData(value: String(pokemonValues[1]))
         requestPokemonData(value: String(pokemonValues[2]))
@@ -148,7 +171,7 @@ class InitialViewController: UIViewController {
                         let res = try JSONDecoder().decode(PokeResponse.self, from: data)
                         print(res)
                         requestPokemonImage(pokemonData: res)
-
+                        
                     } catch {
                         print(error)
                     }
@@ -164,13 +187,13 @@ class InitialViewController: UIViewController {
                 print(error!)
                 return
             }
-
+            
             guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
                 print("Not a proper HTTPURLResponse or statusCode")
                 return
             }
             
-             savePokemonData(pokemonData: pokemonData, pokemonImage: data!)
+            savePokemonData(pokemonData: pokemonData, pokemonImage: data!)
         }.resume()
     }
     

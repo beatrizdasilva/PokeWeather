@@ -77,6 +77,14 @@
                                     <action selector="continueButtonPressed:" destination="TpJ-tQ-Oya" eventType="touchUpInside" id="jEr-LS-3bL"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KdZ-I5-4OS">
+                                <rect key="frame" x="172" y="783" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="MudarTela"/>
+                                <connections>
+                                    <action selector="mudarTela:" destination="TpJ-tQ-Oya" eventType="touchUpInside" id="nHs-iS-4CL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wAY-0l-acS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -92,17 +100,20 @@
                         <outlet property="datePicker" destination="cYr-sb-OD1" id="lfV-oe-AlJ"/>
                         <outlet property="developerLabel" destination="2Zc-no-b5a" id="ytb-gZ-Alp"/>
                         <outlet property="randomDateButton" destination="PXv-Eh-VKQ" id="xRd-N3-t8u"/>
+                        <segue destination="cXE-hO-1h1" kind="show" identifier="Navigation" id="4KV-wH-LmE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8eH-U5-AZS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="173.91304347826087" y="203.57142857142856"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--Navigation-->
         <scene sceneID="3xv-DW-0oR">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="NavigationStoryboard" id="cXE-hO-1h1" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KQB-5I-h2F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Navigation" id="cXE-hO-1h1" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="q2S-A1-tqy"/>
+                </viewControllerPlaceholder>
             </objects>
             <point key="canvasLocation" x="775" y="160"/>
         </scene>
