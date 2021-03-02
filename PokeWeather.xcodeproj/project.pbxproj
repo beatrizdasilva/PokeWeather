@@ -184,7 +184,6 @@
 				4FE04B6325E6F6E7006B1C47 /* Team.storyboard */,
 				4F45271C25E5743700F75C23 /* Assets.xcassets */,
 				836C4FEE25ED6CB60016A631 /* Colors.xcassets */,
-				4F45271E25E5743700F75C23 /* LaunchScreen.storyboard */,
 				307E8E0325E941FD00E8E686 /* PokeDataModel.xcdatamodeld */,
 				4F45272125E5743700F75C23 /* Info.plist */,
 			);
