@@ -46,6 +46,9 @@
                                 <rect key="frame" x="294" y="69" width="100" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Configurações"/>
+                                <connections>
+                                    <action selector="fromCoreData:" destination="1XS-qP-sHa" eventType="touchUpInside" id="OJJ-cu-0Q4"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cloud.drizzle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Qmt-DA-w2q">
                                 <rect key="frame" x="20" y="57" width="75" height="57"/>
@@ -61,7 +64,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qq3-3b-KDb"/>
-                        <color key="backgroundColor" red="0.63137254901960782" green="0.8784313725490196" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.44705882352941173" green="0.44705882352941173" blue="0.44705882352941173" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="Ljz-Vg-huR" firstAttribute="centerX" secondItem="cEO-YB-3Fe" secondAttribute="centerX" id="HsN-vQ-BEw"/>
                             <constraint firstItem="qq3-3b-KDb" firstAttribute="bottom" secondItem="Ljz-Vg-huR" secondAttribute="bottom" constant="100" id="uLG-3F-qRV"/>

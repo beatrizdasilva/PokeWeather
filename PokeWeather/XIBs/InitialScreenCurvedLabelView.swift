@@ -25,6 +25,7 @@ class InitialScreenCurvedLabelView: UIView {
     private func commonInit() {
         Bundle.main.loadNibNamed("InitialScreenCurvedLabel", owner: self, options: nil)
         addSubview(contentView)
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
