@@ -26,7 +26,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="b" translatesAutoresizingMaskIntoConstraints="NO" id="quE-hL-4FE">
-                    <rect key="frame" x="39" y="-120" width="240" height="200"/>
+                    <rect key="frame" x="57" y="-110" width="240" height="215"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T5Y-ks-CvO">
@@ -91,12 +91,12 @@ Its advantage is over Water, Stone and Ground Pokémon, but it has a disadvantag
                         </stackView>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="IHc-3v-L7s" firstAttribute="top" secondItem="QFh-Dy-cHf" secondAttribute="top" constant="105" id="Evr-IB-7T8"/>
+                        <constraint firstItem="IHc-3v-L7s" firstAttribute="top" secondItem="QFh-Dy-cHf" secondAttribute="top" constant="105" id="Evr-IB-7T8" userLabel="Stack View.top = Frame Layout Guide.top + 20"/>
                         <constraint firstItem="isd-Bf-bLK" firstAttribute="top" secondItem="IHc-3v-L7s" secondAttribute="bottom" constant="15" id="GWi-hM-apW"/>
                         <constraint firstItem="QFh-Dy-cHf" firstAttribute="trailing" secondItem="IHc-3v-L7s" secondAttribute="trailing" constant="45" id="JUJ-tB-aJL"/>
                         <constraint firstItem="1N2-gm-Gez" firstAttribute="top" secondItem="isd-Bf-bLK" secondAttribute="bottom" constant="16" id="a8J-xP-Mm8"/>
-                        <constraint firstItem="isd-Bf-bLK" firstAttribute="leading" secondItem="QFh-Dy-cHf" secondAttribute="leading" constant="100" id="gZN-Qu-sb2"/>
-                        <constraint firstItem="QFh-Dy-cHf" firstAttribute="trailing" secondItem="isd-Bf-bLK" secondAttribute="trailing" constant="100" id="jxb-4x-TCu"/>
+                        <constraint firstItem="isd-Bf-bLK" firstAttribute="leading" secondItem="QFh-Dy-cHf" secondAttribute="leading" constant="100" id="gZN-Qu-sb2" userLabel="Stack View.leading = Frame Layout Guide.leading + 80"/>
+                        <constraint firstItem="QFh-Dy-cHf" firstAttribute="trailing" secondItem="isd-Bf-bLK" secondAttribute="trailing" constant="100" id="jxb-4x-TCu" userLabel="Frame Layout Guide.trailing = Stack View.trailing + 80"/>
                         <constraint firstItem="QFh-Dy-cHf" firstAttribute="trailing" secondItem="1N2-gm-Gez" secondAttribute="trailing" constant="20" id="n2S-CH-9N3"/>
                         <constraint firstItem="1N2-gm-Gez" firstAttribute="leading" secondItem="QFh-Dy-cHf" secondAttribute="leading" constant="20" id="qau-mE-sy6"/>
                         <constraint firstItem="IHc-3v-L7s" firstAttribute="leading" secondItem="QFh-Dy-cHf" secondAttribute="leading" constant="45" id="rcG-Vu-3W9"/>

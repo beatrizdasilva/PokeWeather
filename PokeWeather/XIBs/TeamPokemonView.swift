@@ -14,7 +14,6 @@ protocol TeamPokemonViewDelegate {
 
 class TeamPokemonView: UIView {
     @IBOutlet var contentView: UIView!
-
     @IBOutlet weak var pokemonImage: UIImageView!
     @IBOutlet weak var pokemonName: UILabel!
     @IBOutlet weak var pokemonArrowIndicator: UIImageView!
