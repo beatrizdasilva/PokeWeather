@@ -10,7 +10,6 @@
 		3004F30725F02C9500A1FD1E /* TeamPokemonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3004F30525F02C9500A1FD1E /* TeamPokemonView.xib */; };
 		3004F30C25F02CBC00A1FD1E /* TeamPokemonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3004F30B25F02CBC00A1FD1E /* TeamPokemonView.swift */; };
 		3004F30F25F02CD300A1FD1E /* TeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3004F30E25F02CD300A1FD1E /* TeamViewController.swift */; };
-		3004F31325F02CE300A1FD1E /* Team.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3004F31225F02CE300A1FD1E /* Team.storyboard */; };
 		3004F31A25F02CEF00A1FD1E /* ghostParticles.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3004F31525F02CEF00A1FD1E /* ghostParticles.sks */; };
 		3004F31B25F02CEF00A1FD1E /* dragonParticles.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3004F31625F02CEF00A1FD1E /* dragonParticles.sks */; };
 		3004F31D25F02CEF00A1FD1E /* bugParticles.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3004F31825F02CEF00A1FD1E /* bugParticles.sks */; };
@@ -29,9 +28,12 @@
 		303F5E8425ECC62E007F0B38 /* UnusedDarkParticles.sks in Resources */ = {isa = PBXBuildFile; fileRef = 303F5E8325ECC62E007F0B38 /* UnusedDarkParticles.sks */; };
 		303F5E8D25ECCDB8007F0B38 /* electricParticles.sks in Resources */ = {isa = PBXBuildFile; fileRef = 303F5E8C25ECCDB8007F0B38 /* electricParticles.sks */; };
 		3056BC2A25EE256E00E573D0 /* darkParticles.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3056BC2925EE256E00E573D0 /* darkParticles.sks */; };
-		3061CA5E25ED6D77000E0A6B /* InitialScreenCurvedLabel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3061CA5D25ED6D77000E0A6B /* InitialScreenCurvedLabel.xib */; };
 		3061CA6125ED6DF2000E0A6B /* InitialScreenCurvedLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3061CA6025ED6DF2000E0A6B /* InitialScreenCurvedLabelView.swift */; };
-		3061CA6C25ED71AF000E0A6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3061CA6B25ED71AF000E0A6B /* Main.storyboard */; };
+		3077E4E725F03994000F2697 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3077E4E925F03994000F2697 /* Home.storyboard */; };
+		3077E4F025F039B4000F2697 /* Team.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3077E4F225F039B4000F2697 /* Team.storyboard */; };
+		3077E4F925F039F6000F2697 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3077E4FB25F039F6000F2697 /* Main.storyboard */; };
+		3077E50125F03A5E000F2697 /* InitialScreenCurvedLabel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3077E50325F03A5E000F2697 /* InitialScreenCurvedLabel.xib */; };
+		3077E50B25F03B32000F2697 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3077E50A25F03B31000F2697 /* StringExtension.swift */; };
 		307E8E0525E941FD00E8E686 /* PokeDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 307E8E0325E941FD00E8E686 /* PokeDataModel.xcdatamodeld */; };
 		307E8E0D25E9525300E8E686 /* TypeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307E8E0C25E9525300E8E686 /* TypeResponse.swift */; };
 		3087289C25EF810F0015A4B1 /* Configuration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3087289B25EF810F0015A4B1 /* Configuration.storyboard */; };
@@ -44,7 +46,6 @@
 		4F45271B25E5743600F75C23 /* Navigation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F45271925E5743600F75C23 /* Navigation.storyboard */; };
 		4F45271D25E5743700F75C23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F45271C25E5743700F75C23 /* Assets.xcassets */; };
 		4F45272025E5743700F75C23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F45271E25E5743700F75C23 /* LaunchScreen.storyboard */; };
-		4FE04B6725E6F6F5006B1C47 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FE04B6625E6F6F5006B1C47 /* Home.storyboard */; };
 		836C4FEF25ED6CB60016A631 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 836C4FEE25ED6CB60016A631 /* Colors.xcassets */; };
 		83F71A6C25E57AAB002A49BF /* PokeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F71A6B25E57AAB002A49BF /* PokeResponse.swift */; };
 		83F71A6F25E58400002A49BF /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F71A6E25E58400002A49BF /* WeatherResponse.swift */; };
@@ -54,7 +55,6 @@
 		3004F30525F02C9500A1FD1E /* TeamPokemonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TeamPokemonView.xib; path = ../../../../../../Desktop/k/TeamPokemonView.xib; sourceTree = "<group>"; };
 		3004F30B25F02CBC00A1FD1E /* TeamPokemonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeamPokemonView.swift; path = ../ViewController/TeamPokemonView.swift; sourceTree = "<group>"; };
 		3004F30E25F02CD300A1FD1E /* TeamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamViewController.swift; sourceTree = "<group>"; };
-		3004F31225F02CE300A1FD1E /* Team.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Team.storyboard; sourceTree = "<group>"; };
 		3004F31525F02CEF00A1FD1E /* ghostParticles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ghostParticles.sks; sourceTree = "<group>"; };
 		3004F31625F02CEF00A1FD1E /* dragonParticles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = dragonParticles.sks; sourceTree = "<group>"; };
 		3004F31825F02CEF00A1FD1E /* bugParticles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = bugParticles.sks; sourceTree = "<group>"; };
@@ -73,9 +73,22 @@
 		303F5E8325ECC62E007F0B38 /* UnusedDarkParticles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = UnusedDarkParticles.sks; sourceTree = "<group>"; };
 		303F5E8C25ECCDB8007F0B38 /* electricParticles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = electricParticles.sks; sourceTree = "<group>"; };
 		3056BC2925EE256E00E573D0 /* darkParticles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = darkParticles.sks; sourceTree = "<group>"; };
-		3061CA5D25ED6D77000E0A6B /* InitialScreenCurvedLabel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InitialScreenCurvedLabel.xib; sourceTree = "<group>"; };
 		3061CA6025ED6DF2000E0A6B /* InitialScreenCurvedLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialScreenCurvedLabelView.swift; sourceTree = "<group>"; };
-		3061CA6B25ED71AF000E0A6B /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		3077E4E525F0398C000F2697 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Navigation.strings"; sourceTree = "<group>"; };
+		3077E4E625F0398C000F2697 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		3077E4E825F03994000F2697 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
+		3077E4EC25F039A3000F2697 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Home.strings; sourceTree = "<group>"; };
+		3077E4EE25F039A4000F2697 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Home.strings"; sourceTree = "<group>"; };
+		3077E4F125F039B4000F2697 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Team.storyboard; sourceTree = "<group>"; };
+		3077E4F525F039BA000F2697 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Team.strings; sourceTree = "<group>"; };
+		3077E4F725F039E8000F2697 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Team.strings"; sourceTree = "<group>"; };
+		3077E4FA25F039F6000F2697 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3077E4FE25F039FD000F2697 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		3077E50025F03A30000F2697 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
+		3077E50225F03A5E000F2697 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/InitialScreenCurvedLabel.xib; sourceTree = "<group>"; };
+		3077E50625F03A66000F2697 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InitialScreenCurvedLabel.strings; sourceTree = "<group>"; };
+		3077E50825F03A67000F2697 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/InitialScreenCurvedLabel.strings"; sourceTree = "<group>"; };
+		3077E50A25F03B31000F2697 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		307E8E0425E941FD00E8E686 /* PokeDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PokeDataModel.xcdatamodel; sourceTree = "<group>"; };
 		307E8E0C25E9525300E8E686 /* TypeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeResponse.swift; sourceTree = "<group>"; };
 		3087289B25EF810F0015A4B1 /* Configuration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Configuration.storyboard; sourceTree = "<group>"; };
@@ -90,7 +103,6 @@
 		4F45271C25E5743700F75C23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F45271F25E5743700F75C23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F45272125E5743700F75C23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4FE04B6625E6F6F5006B1C47 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		836C4FEE25ED6CB60016A631 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		83F71A6B25E57AAB002A49BF /* PokeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeResponse.swift; sourceTree = "<group>"; };
 		83F71A6E25E58400002A49BF /* WeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
@@ -141,10 +153,10 @@
 		3061CA5325ED6B98000E0A6B /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				3061CA6B25ED71AF000E0A6B /* Main.storyboard */,
+				3077E4FB25F039F6000F2697 /* Main.storyboard */,
 				4F45271925E5743600F75C23 /* Navigation.storyboard */,
-				4FE04B6625E6F6F5006B1C47 /* Home.storyboard */,
-				3004F31225F02CE300A1FD1E /* Team.storyboard */,
+				3077E4E925F03994000F2697 /* Home.storyboard */,
+				3077E4F225F039B4000F2697 /* Team.storyboard */,
 				4F45271E25E5743700F75C23 /* LaunchScreen.storyboard */,
 				3087289B25EF810F0015A4B1 /* Configuration.storyboard */,
 			);
@@ -156,7 +168,7 @@
 			children = (
 				3004F30B25F02CBC00A1FD1E /* TeamPokemonView.swift */,
 				3004F30525F02C9500A1FD1E /* TeamPokemonView.xib */,
-				3061CA5D25ED6D77000E0A6B /* InitialScreenCurvedLabel.xib */,
+				3077E50325F03A5E000F2697 /* InitialScreenCurvedLabel.xib */,
 				302B565325EC03CA00AD862C /* PokemonView.xib */,
 				3061CA6025ED6DF2000E0A6B /* InitialScreenCurvedLabelView.swift */,
 				302B564C25EC031D00AD862C /* PokemonView.swift */,
@@ -193,6 +205,7 @@
 		4F45270725E5743600F75C23 = {
 			isa = PBXGroup;
 			children = (
+				3077E50A25F03B31000F2697 /* StringExtension.swift */,
 				4F45271225E5743600F75C23 /* PokeWeather */,
 				4F45271125E5743600F75C23 /* Products */,
 			);
@@ -269,6 +282,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = 4F45270725E5743600F75C23;
 			productRefGroup = 4F45271125E5743600F75C23 /* Products */;
@@ -286,23 +300,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				3004F31B25F02CEF00A1FD1E /* dragonParticles.sks in Resources */,
-				3061CA5E25ED6D77000E0A6B /* InitialScreenCurvedLabel.xib in Resources */,
+				3077E50125F03A5E000F2697 /* InitialScreenCurvedLabel.xib in Resources */,
 				836C4FEF25ED6CB60016A631 /* Colors.xcassets in Resources */,
 				303F5E7925ECABCB007F0B38 /* fireParticles.sks in Resources */,
 				303F5E7D25ECB7EA007F0B38 /* iceParticles.sks in Resources */,
 				4F45272025E5743700F75C23 /* LaunchScreen.storyboard in Resources */,
-				4FE04B6725E6F6F5006B1C47 /* Home.storyboard in Resources */,
+				3077E4E725F03994000F2697 /* Home.storyboard in Resources */,
 				3004F30725F02C9500A1FD1E /* TeamPokemonView.xib in Resources */,
 				303F5E7A25ECABCB007F0B38 /* Assets.xcassets in Resources */,
 				303F5E6E25ECA25D007F0B38 /* waterParticles.sks in Resources */,
-				3004F31325F02CE300A1FD1E /* Team.storyboard in Resources */,
+				3077E4F025F039B4000F2697 /* Team.storyboard in Resources */,
 				3019A59A25E9765D0069464D /* PokemonTypes.json in Resources */,
 				3004F31E25F02CEF00A1FD1E /* grassParticles.sks in Resources */,
 				3056BC2A25EE256E00E573D0 /* darkParticles.sks in Resources */,
 				4F45271D25E5743700F75C23 /* Assets.xcassets in Resources */,
 				303F5E8425ECC62E007F0B38 /* UnusedDarkParticles.sks in Resources */,
 				3004F31A25F02CEF00A1FD1E /* ghostParticles.sks in Resources */,
-				3061CA6C25ED71AF000E0A6B /* Main.storyboard in Resources */,
+				3077E4F925F039F6000F2697 /* Main.storyboard in Resources */,
 				303F5E8D25ECCDB8007F0B38 /* electricParticles.sks in Resources */,
 				4F45271B25E5743600F75C23 /* Navigation.storyboard in Resources */,
 				3004F31D25F02CEF00A1FD1E /* bugParticles.sks in Resources */,
@@ -333,6 +347,7 @@
 				300A5F2C25EBEB6E00934D36 /* UIViewExtension.swift in Sources */,
 				3004F30C25F02CBC00A1FD1E /* TeamPokemonView.swift in Sources */,
 				4F45271625E5743600F75C23 /* SceneDelegate.swift in Sources */,
+				3077E50B25F03B32000F2697 /* StringExtension.swift in Sources */,
 				302B564D25EC031D00AD862C /* PokemonView.swift in Sources */,
 				303F5E7125ECA478007F0B38 /* ParticleScene.swift in Sources */,
 				83F71A6C25E57AAB002A49BF /* PokeResponse.swift in Sources */,
@@ -342,10 +357,51 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		3077E4E925F03994000F2697 /* Home.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3077E4E825F03994000F2697 /* Base */,
+				3077E4EC25F039A3000F2697 /* en */,
+				3077E4EE25F039A4000F2697 /* pt-BR */,
+			);
+			name = Home.storyboard;
+			sourceTree = "<group>";
+		};
+		3077E4F225F039B4000F2697 /* Team.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3077E4F125F039B4000F2697 /* Base */,
+				3077E4F525F039BA000F2697 /* en */,
+				3077E4F725F039E8000F2697 /* pt-BR */,
+			);
+			name = Team.storyboard;
+			sourceTree = "<group>";
+		};
+		3077E4FB25F039F6000F2697 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3077E4FA25F039F6000F2697 /* Base */,
+				3077E4FE25F039FD000F2697 /* en */,
+				3077E50025F03A30000F2697 /* pt-BR */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3077E50325F03A5E000F2697 /* InitialScreenCurvedLabel.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3077E50225F03A5E000F2697 /* Base */,
+				3077E50625F03A66000F2697 /* en */,
+				3077E50825F03A67000F2697 /* pt-BR */,
+			);
+			name = InitialScreenCurvedLabel.xib;
+			sourceTree = "<group>";
+		};
 		4F45271925E5743600F75C23 /* Navigation.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				4F45271A25E5743600F75C23 /* Base */,
+				3077E4E525F0398C000F2697 /* pt-BR */,
 			);
 			name = Navigation.storyboard;
 			sourceTree = "<group>";
@@ -354,6 +410,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				4F45271F25E5743700F75C23 /* Base */,
+				3077E4E625F0398C000F2697 /* pt-BR */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -365,6 +422,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -426,6 +484,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
