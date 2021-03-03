@@ -42,10 +42,11 @@
                                     <constraint firstAttribute="height" constant="329" id="VXL-2y-rIS"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NC6-2N-3qv">
-                                <rect key="frame" x="294" y="69" width="100" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NC6-2N-3qv">
+                                <rect key="frame" x="334" y="73" width="41" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Configurações"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="gearshape.fill" catalog="system"/>
                                 <connections>
                                     <action selector="fromCoreData:" destination="1XS-qP-sHa" eventType="touchUpInside" id="OJJ-cu-0Q4"/>
                                 </connections>
@@ -83,6 +84,7 @@
     </scenes>
     <resources>
         <image name="cloud.drizzle.fill" catalog="system" width="128" height="125"/>
+        <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

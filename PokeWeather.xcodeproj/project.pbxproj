@@ -14,7 +14,6 @@
 		303F5E6E25ECA25D007F0B38 /* WaterParticles.sks in Resources */ = {isa = PBXBuildFile; fileRef = 303F5E6D25ECA25D007F0B38 /* WaterParticles.sks */; };
 		303F5E7125ECA478007F0B38 /* ParticleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303F5E7025ECA478007F0B38 /* ParticleScene.swift */; };
 		303F5E7925ECABCB007F0B38 /* FireParticles.sks in Resources */ = {isa = PBXBuildFile; fileRef = 303F5E7725ECABCB007F0B38 /* FireParticles.sks */; };
-		303F5E7A25ECABCB007F0B38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 303F5E7825ECABCB007F0B38 /* Assets.xcassets */; };
 		303F5E7D25ECB7EA007F0B38 /* IceParticles.sks in Resources */ = {isa = PBXBuildFile; fileRef = 303F5E7C25ECB7EA007F0B38 /* IceParticles.sks */; };
 		303F5E8025ECBAE1007F0B38 /* PsychicParticles.sks in Resources */ = {isa = PBXBuildFile; fileRef = 303F5E7F25ECBAE1007F0B38 /* PsychicParticles.sks */; };
 		303F5E8425ECC62E007F0B38 /* DarkParticles.sks in Resources */ = {isa = PBXBuildFile; fileRef = 303F5E8325ECC62E007F0B38 /* DarkParticles.sks */; };
@@ -36,6 +35,12 @@
 		4F45272025E5743700F75C23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F45271E25E5743700F75C23 /* LaunchScreen.storyboard */; };
 		4F6C2E7225ED45E400AA599F /* TeamPokemonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F6C2E7125ED45E400AA599F /* TeamPokemonView.xib */; };
 		4F6C2E7525ED463600AA599F /* TeamPokemonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6C2E7425ED463600AA599F /* TeamPokemonView.swift */; };
+		4FA7C7E825EF573B00459764 /* bugParticles.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4FA7C7E725EF573B00459764 /* bugParticles.sks */; };
+		4FA7C7F025EFEFFB00459764 /* dragonParticles.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4FA7C7EF25EFEFFB00459764 /* dragonParticles.sks */; };
+		4FA7C7F825EFF80500459764 /* grassParticles.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4FA7C7F625EFF80500459764 /* grassParticles.sks */; };
+		4FA7C80725F0107E00459764 /* ghostParticles.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4FA7C80525F0107E00459764 /* ghostParticles.sks */; };
+		4FA7C80825F0107E00459764 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FA7C80625F0107E00459764 /* Assets.xcassets */; };
+		4FA7C80B25F0115900459764 /* ghostParticles2.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4FA7C80A25F0115900459764 /* ghostParticles2.sks */; };
 		4FE04B6425E6F6E7006B1C47 /* Team.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FE04B6325E6F6E7006B1C47 /* Team.storyboard */; };
 		4FE04B6725E6F6F5006B1C47 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FE04B6625E6F6F5006B1C47 /* Home.storyboard */; };
 		836C4FEF25ED6CB60016A631 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 836C4FEE25ED6CB60016A631 /* Colors.xcassets */; };
@@ -51,7 +56,6 @@
 		303F5E6D25ECA25D007F0B38 /* WaterParticles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = WaterParticles.sks; sourceTree = "<group>"; };
 		303F5E7025ECA478007F0B38 /* ParticleScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticleScene.swift; sourceTree = "<group>"; };
 		303F5E7725ECABCB007F0B38 /* FireParticles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FireParticles.sks; sourceTree = "<group>"; };
-		303F5E7825ECABCB007F0B38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		303F5E7C25ECB7EA007F0B38 /* IceParticles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = IceParticles.sks; sourceTree = "<group>"; };
 		303F5E7F25ECBAE1007F0B38 /* PsychicParticles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = PsychicParticles.sks; sourceTree = "<group>"; };
 		303F5E8325ECC62E007F0B38 /* DarkParticles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = DarkParticles.sks; sourceTree = "<group>"; };
@@ -75,6 +79,12 @@
 		4F45272125E5743700F75C23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F6C2E7125ED45E400AA599F /* TeamPokemonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamPokemonView.xib; sourceTree = "<group>"; };
 		4F6C2E7425ED463600AA599F /* TeamPokemonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamPokemonView.swift; sourceTree = "<group>"; };
+		4FA7C7E725EF573B00459764 /* bugParticles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = bugParticles.sks; sourceTree = "<group>"; };
+		4FA7C7EF25EFEFFB00459764 /* dragonParticles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = dragonParticles.sks; sourceTree = "<group>"; };
+		4FA7C7F625EFF80500459764 /* grassParticles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = grassParticles.sks; sourceTree = "<group>"; };
+		4FA7C80525F0107E00459764 /* ghostParticles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ghostParticles.sks; sourceTree = "<group>"; };
+		4FA7C80625F0107E00459764 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4FA7C80A25F0115900459764 /* ghostParticles2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ghostParticles2.sks; sourceTree = "<group>"; };
 		4FE04B6325E6F6E7006B1C47 /* Team.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Team.storyboard; sourceTree = "<group>"; };
 		4FE04B6625E6F6F5006B1C47 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		836C4FEE25ED6CB60016A631 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -107,15 +117,20 @@
 		303F5E7625ECABA6007F0B38 /* Particles */ = {
 			isa = PBXGroup;
 			children = (
-				303F5E6D25ECA25D007F0B38 /* WaterParticles.sks */,
-				303F5E7725ECABCB007F0B38 /* FireParticles.sks */,
-				303F5E7C25ECB7EA007F0B38 /* IceParticles.sks */,
-				303F5E7F25ECBAE1007F0B38 /* PsychicParticles.sks */,
+				4FA7C7E725EF573B00459764 /* bugParticles.sks */,
 				303F5E8325ECC62E007F0B38 /* DarkParticles.sks */,
 				3056BC2925EE256E00E573D0 /* DarkParticles2.sks */,
-				303F5E7825ECABCB007F0B38 /* Assets.xcassets */,
+				4FA7C7EF25EFEFFB00459764 /* dragonParticles.sks */,
+				303F5E7725ECABCB007F0B38 /* FireParticles.sks */,
+				4FA7C7F625EFF80500459764 /* grassParticles.sks */,
+				303F5E7C25ECB7EA007F0B38 /* IceParticles.sks */,
+				303F5E7F25ECBAE1007F0B38 /* PsychicParticles.sks */,
+				303F5E6D25ECA25D007F0B38 /* WaterParticles.sks */,
 				303F5E8C25ECCDB8007F0B38 /* ElectricParticles.sks */,
 				303F5E7025ECA478007F0B38 /* ParticleScene.swift */,
+				4FA7C80525F0107E00459764 /* ghostParticles.sks */,
+				4FA7C80625F0107E00459764 /* Assets.xcassets */,
+				4FA7C80A25F0115900459764 /* ghostParticles2.sks */,
 			);
 			path = Particles;
 			sourceTree = "<group>";
@@ -256,15 +271,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FA7C80B25F0115900459764 /* ghostParticles2.sks in Resources */,
 				3061CA5E25ED6D77000E0A6B /* InitialScreenCurvedLabel.xib in Resources */,
+				4FA7C80725F0107E00459764 /* ghostParticles.sks in Resources */,
 				836C4FEF25ED6CB60016A631 /* Colors.xcassets in Resources */,
 				303F5E7925ECABCB007F0B38 /* FireParticles.sks in Resources */,
+				4FA7C80825F0107E00459764 /* Assets.xcassets in Resources */,
 				303F5E7D25ECB7EA007F0B38 /* IceParticles.sks in Resources */,
+				4FA7C7E825EF573B00459764 /* bugParticles.sks in Resources */,
 				4F45272025E5743700F75C23 /* LaunchScreen.storyboard in Resources */,
 				4FE04B6725E6F6F5006B1C47 /* Home.storyboard in Resources */,
 				4FE04B6425E6F6E7006B1C47 /* Team.storyboard in Resources */,
 				4F6C2E7225ED45E400AA599F /* TeamPokemonView.xib in Resources */,
-				303F5E7A25ECABCB007F0B38 /* Assets.xcassets in Resources */,
 				303F5E6E25ECA25D007F0B38 /* WaterParticles.sks in Resources */,
 				3019A59A25E9765D0069464D /* PokemonTypes.json in Resources */,
 				3056BC2A25EE256E00E573D0 /* DarkParticles2.sks in Resources */,
@@ -273,8 +291,10 @@
 				3061CA6C25ED71AF000E0A6B /* Main.storyboard in Resources */,
 				303F5E8D25ECCDB8007F0B38 /* ElectricParticles.sks in Resources */,
 				4F45271B25E5743600F75C23 /* Navigation.storyboard in Resources */,
+				4FA7C7F825EFF80500459764 /* grassParticles.sks in Resources */,
 				302B565425EC03CA00AD862C /* PokemonView.xib in Resources */,
 				303F5E8025ECBAE1007F0B38 /* PsychicParticles.sks in Resources */,
+				4FA7C7F025EFEFFB00459764 /* dragonParticles.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
