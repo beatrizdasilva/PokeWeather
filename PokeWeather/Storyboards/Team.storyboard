@@ -42,7 +42,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My team" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jmd-bi-m2Y">
                                 <rect key="frame" x="153" y="68" width="108" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -70,8 +70,24 @@
                                 <rect key="frame" x="342" y="122" width="25" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YD7-CF-mEf">
+                                <rect key="frame" x="20" y="238" width="53" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="left"/>
+                                <connections>
+                                    <action selector="btnPrevious:" destination="oXf-Hp-KcG" eventType="touchUpInside" id="sIt-TS-a6c"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X08-5Q-AgI">
+                                <rect key="frame" x="348" y="239" width="53" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="right"/>
+                                <connections>
+                                    <action selector="btnNext:" destination="oXf-Hp-KcG" eventType="touchUpInside" id="ocn-7w-DsY"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6oF-qN-0u1">
-                                <rect key="frame" x="348" y="69" width="19" height="22"/>
+                                <rect key="frame" x="348" y="68" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="square.and.arrow.up" catalog="system"/>
                             </button>
@@ -82,6 +98,8 @@
                     <navigationItem key="navigationItem" id="qDE-XA-Nf8"/>
                     <connections>
                         <outlet property="PokemonCard" destination="UMM-Kj-eYk" id="awV-uL-ikr"/>
+                        <outlet property="btnLeft" destination="YD7-CF-mEf" id="Dwo-23-p82"/>
+                        <outlet property="btnRight" destination="X08-5Q-AgI" id="e5E-Ku-4Vf"/>
                         <outlet property="firstPokemonArrow" destination="CyO-aT-6lT" id="2oC-cH-Hn3"/>
                         <outlet property="firstPokemonMiniature" destination="kbd-8D-VmH" id="uf2-9z-NyX"/>
                         <outlet property="secondPokemonArrow" destination="P0M-JI-B8P" id="t1K-tz-qdd"/>
@@ -100,6 +118,8 @@
         <image name="arrow.down" catalog="system" width="120" height="128"/>
         <image name="arrow.up" catalog="system" width="120" height="128"/>
         <image name="b" width="215" height="215"/>
+        <image name="left" width="115.08999633789062" height="151.91000366210938"/>
+        <image name="right" width="115.08999633789062" height="151.91000366210938"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

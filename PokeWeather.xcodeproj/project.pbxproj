@@ -97,8 +97,8 @@
 			isa = PBXGroup;
 			children = (
 				30D0EA3B25ED721F00584A1A /* InitialViewController.swift */,
-				3095067C25E99CC800009168 /* HomeViewController.swift */,
 				4F45271725E5743600F75C23 /* ViewController.swift */,
+				3095067C25E99CC800009168 /* HomeViewController.swift */,
 				3090F1EF25EEE92800D60688 /* TeamViewController.swift */,
 			);
 			path = ViewController;
@@ -123,10 +123,11 @@
 		3061CA5325ED6B98000E0A6B /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				4F45271E25E5743700F75C23 /* LaunchScreen.storyboard */,
 				3061CA6B25ED71AF000E0A6B /* Main.storyboard */,
 				4F45271925E5743600F75C23 /* Navigation.storyboard */,
 				4FE04B6625E6F6F5006B1C47 /* Home.storyboard */,
-				4F45271E25E5743700F75C23 /* LaunchScreen.storyboard */,
+				4FE04B6325E6F6E7006B1C47 /* Team.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -136,8 +137,10 @@
 			children = (
 				3061CA5D25ED6D77000E0A6B /* InitialScreenCurvedLabel.xib */,
 				302B565325EC03CA00AD862C /* PokemonView.xib */,
+				4F6C2E7125ED45E400AA599F /* TeamPokemonView.xib */,
 				3061CA6025ED6DF2000E0A6B /* InitialScreenCurvedLabelView.swift */,
 				302B564C25EC031D00AD862C /* PokemonView.swift */,
+				4F6C2E7425ED463600AA599F /* TeamPokemonView.swift */,
 			);
 			path = XIBs;
 			sourceTree = "<group>";
@@ -188,13 +191,10 @@
 				4F45271325E5743600F75C23 /* AppDelegate.swift */,
 				4F45271525E5743600F75C23 /* SceneDelegate.swift */,
 				300A5F2B25EBEB6E00934D36 /* UIViewExtension.swift */,
-				4FE04B6325E6F6E7006B1C47 /* Team.storyboard */,
 				4F45271C25E5743700F75C23 /* Assets.xcassets */,
 				836C4FEE25ED6CB60016A631 /* Colors.xcassets */,
 				307E8E0325E941FD00E8E686 /* PokeDataModel.xcdatamodeld */,
 				4F45272125E5743700F75C23 /* Info.plist */,
-				4F6C2E7125ED45E400AA599F /* TeamPokemonView.xib */,
-				4F6C2E7425ED463600AA599F /* TeamPokemonView.swift */,
 			);
 			path = PokeWeather;
 			sourceTree = "<group>";

@@ -7,25 +7,24 @@
 
 import UIKit
 
+protocol TeamPokemonViewDelegate {
+    func increase()
+    func decrease()
+}
+
 class TeamPokemonView: UIView {
     @IBOutlet var contentView: UIView!
-    
-    @IBOutlet weak var btnPrevious: UIButton!
-    @IBOutlet weak var btnNext: UIButton!
-    
+    @IBOutlet weak var pokemonImage: UIImageView!
     @IBOutlet weak var pokemonName: UILabel!
     @IBOutlet weak var pokemonArrowIndicator: UIImageView!
-    
     @IBOutlet weak var pokemonFirstType: UIImageView!
+    @IBOutlet weak var pokemonSecondType: UIImageView!
     @IBOutlet weak var pokemonWeight: UILabel!
-    
     @IBOutlet weak var pokemonDescription: UILabel!
-    
     
     override func awakeFromNib() {
         contentView.isUserInteractionEnabled = true
         contentView.layer.cornerRadius = 40
-
         contentView.layer.shadowColor = UIColor.black.cgColor
         contentView.layer.shadowRadius = 15
         contentView.layer.shadowOpacity = 0.42
@@ -46,4 +45,6 @@ class TeamPokemonView: UIView {
         super.init(coder: aDecoder)
         commonInit()
     }
+    
+
 }
