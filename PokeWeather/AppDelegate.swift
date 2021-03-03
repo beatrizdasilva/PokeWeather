@@ -7,17 +7,24 @@
 
 import UIKit
 import CoreData
+import CoreLocation
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
     
+    let locationManager = CLLocationManager()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         preloadPokemonTypeData()
         
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+        
         return true
     }
+
 
     // MARK: UISceneSession Lifecycle
 
@@ -101,7 +108,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let pokemonType = PokemonType(context: backgroundContext)
                 pokemonType.name = name
                 pokemonType.weakness = pokeWeakness
-                pokemonType.strength = pokeStrength
+                
+                if pokeStrength.count != 0 {
+                    pokemonType.strength = pokeStrength
+                } else {
+                    pokemonType.strength = ["not available"]
+                }
+                
                 
 //                print(name, pokeWeakness, pokeStrength)
                 try! backgroundContext.save()

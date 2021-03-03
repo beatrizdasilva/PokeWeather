@@ -77,14 +77,6 @@
                                     <action selector="continueButtonPressed:" destination="TpJ-tQ-Oya" eventType="touchUpInside" id="jEr-LS-3bL"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KdZ-I5-4OS">
-                                <rect key="frame" x="172" y="783" width="71" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="MudarTela"/>
-                                <connections>
-                                    <action selector="mudarTela:" destination="TpJ-tQ-Oya" eventType="touchUpInside" id="nHs-iS-4CL"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wAY-0l-acS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -110,10 +102,10 @@
         <!--Navigation-->
         <scene sceneID="3xv-DW-0oR">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KQB-5I-h2F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="Navigation" id="cXE-hO-1h1" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="q2S-A1-tqy"/>
                 </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KQB-5I-h2F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="775" y="160"/>
         </scene>

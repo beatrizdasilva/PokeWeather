@@ -17,8 +17,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         
-//        self.window = UIWindow(frame: UIScreen.main.bounds)
-        // Or "Admin"
 
         var storyboard = UIStoryboard(name: "Main", bundle: nil)
         var vc: UIViewController?
@@ -31,13 +29,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
             window?.rootViewController = vc
             window?.makeKeyAndVisible()
-        }
-        
-        if(UserDefaults.standard.bool(forKey: "notFirstInApp") == false){
-            UserDefaults.standard.set(true, forKey: "notFirstInApp")
-            //Here you can show storyboard that you have to launch at first launch
-        }else{
-            //Here you can show storyboard that you have to launch after first launch
         }
         
         guard let _ = (scene as? UIWindowScene) else { return }

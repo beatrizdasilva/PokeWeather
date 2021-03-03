@@ -8,12 +8,15 @@
 import UIKit
 import SpriteKit
 import CoreData
+import CoreLocation
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, CLLocationManagerDelegate {
     
     var pokemonData: [Pokemon]?
     
+    let locationManager = (UIApplication.shared.delegate as! AppDelegate).locationManager
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+//    var currentWeather: WeatherResponse?
 
 //    @IBOutlet weak var imagem: UIImageView!
 //    @IBOutlet weak var nome: UILabel!
@@ -23,6 +26,7 @@ class HomeViewController: UIViewController {
     private let skView = SKView()
     
     @IBOutlet weak var pokemonCard: PokemonView!
+    var currentLocation: CLLocation?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,20 +41,18 @@ class HomeViewController: UIViewController {
         
         setupParticles()
         initSKScene()
+        setupLocation()
     }
     
     @IBAction func fromCoreData(_ sender: Any) {
         do {
             let request = Pokemon.fetchRequest() as NSFetchRequest<Pokemon>
             
-            //set filtering
-//            let pred = NSPredicate(format: "name CONTAINS 'Ayaya'")
-//            request.predicate = pred
-            
             self.pokemonData = try context.fetch(request)
+            print(pokemonData?.count)
             
             DispatchQueue.main.async { [self] in
-                let pokemon = pokemonData![0]
+                let pokemon = pokemonData![2]
                 self.pokemonCard.pokemonImage.image = UIImage(data: pokemon.sprite!)
                 self.pokemonCard.pokemonName.text = pokemon.name
                 self.pokemonCard.statusLabel.text = "main: \(pokemon.mainType!.name!), secondary: \(pokemon.secondaryType ?? "batata")"
@@ -58,6 +60,51 @@ class HomeViewController: UIViewController {
             }
         } catch {
             print(error)
+        }
+        
+        updateWeatherData()
+    }
+    
+    func setupLocation() {
+        locationManager.delegate = self
+        locationManager.startUpdatingLocation()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if !locations.isEmpty, currentLocation == nil {
+            currentLocation = locations.first
+            locationManager.stopUpdatingLocation()
+            updateWeatherData()
+        }
+    }
+    
+    func updateWeatherData() {
+        guard let currentLocation = currentLocation else { return }
+        let long = currentLocation.coordinate.longitude
+        let lat = currentLocation.coordinate.latitude
+        
+        print("\(long) | \(lat)")
+        
+        if let url = URL(string: "https://fcc-weather-api.glitch.me/api/current?lat=\(lat)&lon=\(long)") {
+            URLSession.shared.dataTask(with: url) { [self] data, response, error in
+                if let data = data {
+                    do {
+                        let res = try JSONDecoder().decode(WeatherResponse.self, from: data)
+                        
+                        if res.name != "Shuzenji" {
+                            print(res.weather[0].main)
+//                            currentWeather = res
+                            UserDefaults.standard.setValue("\(res.weather[0].main)", forKey: "currentWeather")
+                        } else {
+                            updateWeatherData()
+                        }
+                        
+                    } catch {
+                        print(error)
+                    }
+                }
+                
+            }.resume()
         }
     }
     
@@ -85,47 +132,47 @@ class HomeViewController: UIViewController {
         skView.presentScene(particleScene)
     }
     
-    func requestData(pokeNumber: Int) {
-        if let url = URL(string: "https://pokeapi.co/api/v2/pokemon/umbreon") {
-            URLSession.shared.dataTask(with: url) { [self] data, response, error in
-                if let data = data {
-                    do {
-                        let res = try JSONDecoder().decode(PokeResponse.self, from: data)
-                        
-                        DispatchQueue.main.async {
-                            pokemonCard.pokemonName.text = res.species.name.uppercased()
-                            pokemonCard.statusLabel.text =
-                                """
-                                KKKK SLA A TEMPERATURA FI
-                                SEU POKEMON TA MENOS MEME HJ
-                                """.lowercased()
-                        }
-                        updateImage(image: res.sprites.other.officialArtwork.front_default)
-                    } catch {
-                        print(error)
-                    }
-                }
-            }.resume()
-        }
-    }
-    
-    func updateImage(image: String) {
-        guard let url = URL(string: image) else { return }
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
-            if error != nil {
-                print(error!)
-                return
-            }
-
-            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                print("Not a proper HTTPURLResponse or statusCode")
-                return
-            }
-
-            DispatchQueue.main.async {
-                self.pokemonCard.pokemonImage.image = UIImage(data: data!)
-            }
-        }.resume()
-    }
+//    func requestData(pokeNumber: Int) {
+//        if let url = URL(string: "https://pokeapi.co/api/v2/pokemon/umbreon") {
+//            URLSession.shared.dataTask(with: url) { [self] data, response, error in
+//                if let data = data {
+//                    do {
+//                        let res = try JSONDecoder().decode(PokeResponse.self, from: data)
+//
+//                        DispatchQueue.main.async {
+//                            pokemonCard.pokemonName.text = res.species.name.uppercased()
+//                            pokemonCard.statusLabel.text =
+//                                """
+//                                KKKK SLA A TEMPERATURA FI
+//                                SEU POKEMON TA MENOS MEME HJ
+//                                """.lowercased()
+//                        }
+//                        updateImage(image: res.sprites.other.officialArtwork.front_default)
+//                    } catch {
+//                        print(error)
+//                    }
+//                }
+//            }.resume()
+//        }
+//    }
+//
+//    func updateImage(image: String) {
+//        guard let url = URL(string: image) else { return }
+//        URLSession.shared.dataTask(with: url) { (data, response, error) in
+//            if error != nil {
+//                print(error!)
+//                return
+//            }
+//
+//            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+//                print("Not a proper HTTPURLResponse or statusCode")
+//                return
+//            }
+//
+//            DispatchQueue.main.async {
+//                self.pokemonCard.pokemonImage.image = UIImage(data: data!)
+//            }
+//        }.resume()
+//    }
 
 }
