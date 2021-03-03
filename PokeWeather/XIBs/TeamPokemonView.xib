@@ -10,49 +10,40 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TeamPokemonView" customModule="PokeWeather" customModuleProvider="target">
             <connections>
-                <outlet property="btnNext" destination="VTO-MG-UMC" id="wFA-6n-Oiw"/>
-                <outlet property="btnPrevious" destination="t5K-Ed-9C3" id="gbN-By-C2a"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="uTg-wX-jck"/>
                 <outlet property="pokemonArrowIndicator" destination="RPj-3d-ubc" id="O58-y9-3Fk"/>
                 <outlet property="pokemonDescription" destination="1N2-gm-Gez" id="1oR-ii-tbz"/>
                 <outlet property="pokemonFirstType" destination="vJP-xf-Mef" id="fMM-yC-hoX"/>
+                <outlet property="pokemonImage" destination="quE-hL-4FE" id="ESA-Uf-aaO"/>
                 <outlet property="pokemonName" destination="7AU-c2-loj" id="exO-25-ahU"/>
+                <outlet property="pokemonSecondType" destination="4DM-tm-2mN" id="hd5-QY-tTw"/>
                 <outlet property="pokemonWeight" destination="jYE-TI-VWC" id="agR-WE-t5c"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="319" height="395"/>
+        <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="354" height="395"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t5K-Ed-9C3">
-                    <rect key="frame" x="-23" y="10" width="55" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Anterior"/>
-                </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="b" translatesAutoresizingMaskIntoConstraints="NO" id="quE-hL-4FE">
                     <rect key="frame" x="39" y="-120" width="240" height="200"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VTO-MG-UMC">
-                    <rect key="frame" x="290" y="10" width="62" height="30"/>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T5Y-ks-CvO">
+                    <rect key="frame" x="0.0" y="0.0" width="354" height="395"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Posterior"/>
-                </button>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T5Y-ks-CvO">
-                    <rect key="frame" x="0.0" y="0.0" width="319" height="395"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="IHc-3v-L7s">
-                            <rect key="frame" x="45" y="105" width="229" height="36"/>
+                            <rect key="frame" x="45" y="105" width="264" height="36"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BULBASAUR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7AU-c2-loj">
-                                    <rect key="frame" x="0.0" y="0.0" width="213" height="36"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="248" height="36"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="RPj-3d-ubc">
-                                    <rect key="frame" x="213" y="6.5" width="16" height="23"/>
+                                    <rect key="frame" x="248" y="6.5" width="16" height="23"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="16" id="7va-ju-ZVU"/>
                                         <constraint firstAttribute="height" constant="25" id="bZL-aT-fQ2"/>
@@ -60,26 +51,8 @@
                                 </imageView>
                             </subviews>
                         </stackView>
-                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="isd-Bf-bLK">
-                            <rect key="frame" x="120" y="156" width="79" height="32"/>
-                            <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="b" translatesAutoresizingMaskIntoConstraints="NO" id="vJP-xf-Mef">
-                                    <rect key="frame" x="0.0" y="0.0" width="20" height="32"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="32" id="Ueu-eg-Qsg"/>
-                                        <constraint firstAttribute="width" constant="20" id="fWI-H4-ugg"/>
-                                    </constraints>
-                                </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 Kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYE-TI-VWC">
-                                    <rect key="frame" x="30" y="5.5" width="49" height="21.5"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                        </stackView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1N2-gm-Gez">
-                            <rect key="frame" x="20" y="204" width="279" height="286.5"/>
+                            <rect key="frame" x="20" y="204" width="314" height="286.5"/>
                             <string key="text">Bulbasaur is a Grass Pokémon and sunny days make it stronger.
 
 Its advantage is over Water, Stone and Ground Pokémon, but it has a disadvantage for those of the Ice, Fire, Bug, Poison and Flying type.
@@ -91,17 +64,42 @@ Its advantage is over Water, Stone and Ground Pokémon, but it has a disadvantag
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="isd-Bf-bLK">
+                            <rect key="frame" x="100" y="156" width="154" height="32"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="b" translatesAutoresizingMaskIntoConstraints="NO" id="vJP-xf-Mef">
+                                    <rect key="frame" x="0.0" y="0.0" width="20" height="32"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="32" id="Ueu-eg-Qsg"/>
+                                        <constraint firstAttribute="width" constant="20" id="fWI-H4-ugg"/>
+                                    </constraints>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="b" translatesAutoresizingMaskIntoConstraints="NO" id="4DM-tm-2mN">
+                                    <rect key="frame" x="30" y="0.0" width="20" height="32"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="20" id="Aga-Wy-GOn"/>
+                                        <constraint firstAttribute="height" constant="32" id="tnz-m9-ghy"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3000 Kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYE-TI-VWC">
+                                    <rect key="frame" x="60" y="5.5" width="94" height="21.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="QFh-Dy-cHf" firstAttribute="trailing" secondItem="isd-Bf-bLK" secondAttribute="trailing" constant="120" id="1fL-yF-CXV"/>
                         <constraint firstItem="IHc-3v-L7s" firstAttribute="top" secondItem="QFh-Dy-cHf" secondAttribute="top" constant="105" id="Evr-IB-7T8"/>
                         <constraint firstItem="isd-Bf-bLK" firstAttribute="top" secondItem="IHc-3v-L7s" secondAttribute="bottom" constant="15" id="GWi-hM-apW"/>
                         <constraint firstItem="QFh-Dy-cHf" firstAttribute="trailing" secondItem="IHc-3v-L7s" secondAttribute="trailing" constant="45" id="JUJ-tB-aJL"/>
                         <constraint firstItem="1N2-gm-Gez" firstAttribute="top" secondItem="isd-Bf-bLK" secondAttribute="bottom" constant="16" id="a8J-xP-Mm8"/>
+                        <constraint firstItem="isd-Bf-bLK" firstAttribute="leading" secondItem="QFh-Dy-cHf" secondAttribute="leading" constant="100" id="gZN-Qu-sb2"/>
+                        <constraint firstItem="QFh-Dy-cHf" firstAttribute="trailing" secondItem="isd-Bf-bLK" secondAttribute="trailing" constant="100" id="jxb-4x-TCu"/>
                         <constraint firstItem="QFh-Dy-cHf" firstAttribute="trailing" secondItem="1N2-gm-Gez" secondAttribute="trailing" constant="20" id="n2S-CH-9N3"/>
                         <constraint firstItem="1N2-gm-Gez" firstAttribute="leading" secondItem="QFh-Dy-cHf" secondAttribute="leading" constant="20" id="qau-mE-sy6"/>
                         <constraint firstItem="IHc-3v-L7s" firstAttribute="leading" secondItem="QFh-Dy-cHf" secondAttribute="leading" constant="45" id="rcG-Vu-3W9"/>
-                        <constraint firstItem="isd-Bf-bLK" firstAttribute="leading" secondItem="QFh-Dy-cHf" secondAttribute="leading" constant="120" id="x3N-IM-e0b"/>
                     </constraints>
                     <viewLayoutGuide key="contentLayoutGuide" id="4A0-tM-2ZJ"/>
                     <viewLayoutGuide key="frameLayoutGuide" id="QFh-Dy-cHf"/>
@@ -109,12 +107,6 @@ Its advantage is over Water, Stone and Ground Pokémon, but it has a disadvantag
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <constraints>
-                <constraint firstItem="T5Y-ks-CvO" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="dAZ-qt-UDJ"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="T5Y-ks-CvO" secondAttribute="bottom" id="jr0-0M-gx7"/>
-                <constraint firstItem="T5Y-ks-CvO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="sk3-Qh-25F"/>
-                <constraint firstItem="T5Y-ks-CvO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="uFo-kI-p6U"/>
-            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="131.15942028985509" y="126.89732142857142"/>
         </view>

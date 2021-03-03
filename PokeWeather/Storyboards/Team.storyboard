@@ -75,6 +75,22 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="square.and.arrow.up" catalog="system"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YD7-CF-mEf">
+                                <rect key="frame" x="20" y="238" width="53" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="left"/>
+                                <connections>
+                                    <action selector="btnPrevious:" destination="oXf-Hp-KcG" eventType="touchUpInside" id="sIt-TS-a6c"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X08-5Q-AgI">
+                                <rect key="frame" x="348" y="239" width="53" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="right"/>
+                                <connections>
+                                    <action selector="btnNext:" destination="oXf-Hp-KcG" eventType="touchUpInside" id="ocn-7w-DsY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9Xo-oA-Adb"/>
                         <color key="backgroundColor" red="0.76454168548775603" green="0.90357432013790628" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -100,6 +116,8 @@
         <image name="arrow.down" catalog="system" width="120" height="128"/>
         <image name="arrow.up" catalog="system" width="120" height="128"/>
         <image name="b" width="215" height="215"/>
+        <image name="left" width="115.08999633789062" height="151.91000366210938"/>
+        <image name="right" width="115.08999633789062" height="151.91000366210938"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
