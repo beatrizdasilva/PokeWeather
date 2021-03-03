@@ -1,0 +1,12 @@
+
+/* Class = "UITabBarItem"; title = "Team"; ObjectID = "KYU-jm-YvX"; */
+"KYU-jm-YvX.title" = "Team";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "X08-5Q-AgI"; */
+"X08-5Q-AgI.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "YD7-CF-mEf"; */
+"YD7-CF-mEf.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "My team"; ObjectID = "jmd-bi-m2Y"; */
+"jmd-bi-m2Y.text" = "My team";
