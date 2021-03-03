@@ -48,9 +48,8 @@ class TeamViewController: UIViewController {
         PokemonCard.pokemonWeight.text = "\(NSString(format: "%.1f", pokemonData![pokemonIndex].weight) as String) Kg"
         PokemonCard.pokemonFirstType.image = UIImage(named: "\(pokemonData![pokemonIndex].mainType!.name!)")
         PokemonCard.pokemonSecondType.image = UIImage(named: "\(pokemonData![pokemonIndex].secondaryType!)")
-        //            PokemonCard.pokemonArrowIndicator UIImageView
-        //            PokemonCard.pokemonDescription.text = ""
-        
+        PokemonCard.pokemonDescription.text = "\(pokemonData![pokemonIndex].name!) is a \(pokemonData![pokemonIndex].mainType!.name!) Pokémon and \(true) days make it stronger.\n\nIts advantage is over \(pokemonData![pokemonIndex].mainType!.strength!) Pokémon, but it has a disadvantage for those of \(true)"
+//        PokemonCard.pokemonArrowIndicator UIImageView
         
         btnLeft.isHidden = false
         btnRight.isHidden = false
