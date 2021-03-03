@@ -19,42 +19,29 @@ class InitialViewController: UIViewController {
     @IBOutlet weak var developerLabel: UILabel!
     @IBOutlet weak var creditsLabel: UILabel!
     
+    var activityIndicator: UIActivityIndicatorView!
+    
+    var success = 0
     
     var types: [PokemonType]?
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-    let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+    let defaults = UserDefaults.standard
     
-    
+    var pokemonValues: [String.SubSequence] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        let defaults = UserDefaults.standard
-        
-        
         setupUI()
-        
-        
-        defaults.set(true, forKey: "AcessoPrimeiraVez") 
-        
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        //        performSegue(withIdentifier: "Navigation", sender: self)
-    }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         if segue.destination is UITabBarController  {
             let vc = segue.destination as? UITabBarController
         }
-    }
-    
-    @IBAction func mudarTela(_ sender: Any) {
-        performSegue(withIdentifier: "Navigation", sender: self)
     }
     
     func setupUI() {
@@ -99,7 +86,7 @@ class InitialViewController: UIViewController {
         dateFormatter.dateFormat = "YY/M/d"
         
         let stringDate = dateFormatter.string(from: datePicker.date)
-        var pokemonValues = stringDate.split(separator: "/")
+        pokemonValues = stringDate.split(separator: "/")
         
         if pokemonValues[0] == "00" {
             pokemonValues[0] = "100"
@@ -112,7 +99,7 @@ class InitialViewController: UIViewController {
         print(pokemonValues)
         
         
-        pokemonValues[0] = "\(Int.random(in: 0...100))"
+        pokemonValues[0] = "\(Int.random(in: 1...100))"
         pokemonValues[1] = "\(Int.random(in: 101...300))"
         pokemonValues[2] = "\(Int.random(in: 301...493))"
         
@@ -120,9 +107,14 @@ class InitialViewController: UIViewController {
         print(pokemonValues)
         
         
-        requestPokemonData(value: String(pokemonValues[0]))
-        requestPokemonData(value: String(pokemonValues[1]))
-        requestPokemonData(value: String(pokemonValues[2]))
+        NotificationCenter.default.addObserver(self, selector: #selector(increaseSuccess), name: Notification.Name(rawValue: "SUCCESS_OK"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(changeScreen), name: Notification.Name(rawValue: "SAVED_OK"), object: nil)
+
+        randomDateButton.animateButton(shouldLoad: true, color: randomDateButton.currentTitleColor)
+        
+        for i in 0...2 {
+            requestPokemonData(value: String(pokemonValues[i]))
+        }
     }
     
     @IBAction func continueButtonPressed(_ sender: Any) {
@@ -130,7 +122,7 @@ class InitialViewController: UIViewController {
         dateFormatter.dateFormat = "YY/M/d"
         
         let stringDate = dateFormatter.string(from: datePicker.date)
-        var pokemonValues = stringDate.split(separator: "/")
+        pokemonValues = stringDate.split(separator: "/")
         
         print(pokemonValues)
         
@@ -155,13 +147,35 @@ class InitialViewController: UIViewController {
         print(pokemonValues)
         
         
+        NotificationCenter.default.addObserver(self, selector: #selector(increaseSuccess), name: Notification.Name(rawValue: "SUCCESS_OK"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(changeScreen), name: Notification.Name(rawValue: "SAVED_OK"), object: nil)
+
+        continueButton.animateButton(shouldLoad: true, color: continueButton.currentTitleColor)
+        for i in 0...2 {
+            requestPokemonData(value: String(pokemonValues[i]))
+        }
         
-        
-        requestPokemonData(value: String(pokemonValues[0]))
-        requestPokemonData(value: String(pokemonValues[1]))
-        requestPokemonData(value: String(pokemonValues[2]))
+    }
+
+    
+    @objc func changeScreen() {
+        DispatchQueue.main.async { [self] in
+            defaults.setValue(true, forKey: "AcessoPrimeiraVez")
+            performSegue(withIdentifier: "Navigation", sender: nil)
+        }
     }
     
+    @objc func increaseSuccess() {
+        DispatchQueue.main.async { [self] in
+            if success < 2 {
+                success += 1
+                print("incresed")
+            } else if success == 2 {
+                print("done")
+                NotificationCenter.default.post(name: Notification.Name("SAVED_OK"), object: nil)
+            }
+        }
+    }
     
     func requestPokemonData(value: String) {
         if let url = URL(string: "https://pokeapi.co/api/v2/pokemon/" + value) {
@@ -194,6 +208,7 @@ class InitialViewController: UIViewController {
             }
             
             savePokemonData(pokemonData: pokemonData, pokemonImage: data!)
+            
         }.resume()
     }
     
@@ -217,14 +232,16 @@ class InitialViewController: UIViewController {
             newPokemon.secondaryType = "Not Available"
         }
         
-        //save
+
+        
         do {
             try self.context.save()
+            print("saved")
         } catch {
             print(error)
         }
         
-        
+        NotificationCenter.default.post(name: Notification.Name("SUCCESS_OK"), object: nil)
         
     }
     

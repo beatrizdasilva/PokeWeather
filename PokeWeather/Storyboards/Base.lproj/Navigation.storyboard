@@ -9,7 +9,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="pFz-8M-YON">
             <objects>
-                <tabBarController storyboardIdentifier="NavigationStoryboard" modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="TIk-CG-6AN" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="NavigationStoryboard" modalPresentationStyle="fullScreen" id="TIk-CG-6AN" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="J9C-R7-F7D">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

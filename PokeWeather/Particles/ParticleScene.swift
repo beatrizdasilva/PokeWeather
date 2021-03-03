@@ -11,13 +11,11 @@ import SpriteKit
 class ParticleScene: SKScene {
     override func didMove(to view: SKView) {
         super.didMove(to: view)
-        
-        setupParticleEmitter()
     }
     
     //starting from above -50, from below -1920, from middle /2.
-    private func setupParticleEmitter() {
-        let particleEmitter = SKEmitterNode(fileNamed: "DarkParticles2")!
+    func setupParticleEmitter(type: String) {
+        let particleEmitter = SKEmitterNode(fileNamed: "waterParticles")!
         particleEmitter.position = CGPoint(x: size.width/2, y: size.height - 50)
         addChild(particleEmitter)
     }
