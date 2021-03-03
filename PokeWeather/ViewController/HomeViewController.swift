@@ -10,18 +10,18 @@ import SpriteKit
 import CoreData
 import CoreLocation
 
+protocol ParticleEmitterDelegate {
+    func setupParticleEmitter(type: String)
+}
+
 class HomeViewController: UIViewController, CLLocationManagerDelegate {
     
     var pokemonData: [Pokemon]?
+    @IBOutlet weak var weatherImageView: UIImageView!
+    var particleEmitterDelegate: ParticleEmitterDelegate?
     
     let locationManager = (UIApplication.shared.delegate as! AppDelegate).locationManager
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-//    var currentWeather: WeatherResponse?
-
-//    @IBOutlet weak var imagem: UIImageView!
-//    @IBOutlet weak var nome: UILabel!
-//    @IBOutlet weak var tipo: UILabel!
-//    @IBOutlet weak var peso: UILabel!
     
     private let skView = SKView()
     
@@ -31,17 +31,16 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-//        requestData(pokeNumber: Int.random(in: 1...150))
-        
         self.navigationController?.navigationBar.isHidden = true
         self.tabBarController?.tabBar.isTranslucent = true
         self.tabBarController?.tabBar.backgroundColor = .white
         pokemonCard.layer.cornerRadius = pokemonCard.frame.height / 2
         
         setupParticles()
-        initSKScene()
+//        initSKScene()
         setupLocation()
+        fetchStrongestPokemon()
+        fromCoreData(self)
     }
     
     @IBAction func fromCoreData(_ sender: Any) {
@@ -51,18 +50,32 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
             self.pokemonData = try context.fetch(request)
             print(pokemonData?.count)
             
-            DispatchQueue.main.async { [self] in
-                let pokemon = pokemonData![2]
-                self.pokemonCard.pokemonImage.image = UIImage(data: pokemon.sprite!)
-                self.pokemonCard.pokemonName.text = pokemon.name
-                self.pokemonCard.statusLabel.text = "main: \(pokemon.mainType!.name!), secondary: \(pokemon.secondaryType ?? "batata")"
-                self.pokemonCard.advantageLabel.text = "\(pokemon.mainType!.strength![0])"
-            }
+            updateUI()
+            
         } catch {
             print(error)
         }
-        
-        updateWeatherData()
+    }
+    
+    func updateUI() {
+        DispatchQueue.main.async { [self] in
+            
+            //UPDATES IN XIB
+            let pokemon = pokemonData![0]
+            let pokeType = (pokemon.mainType!.name!)
+            self.pokemonCard.pokemonImage.image = UIImage(data: pokemon.sprite!)
+            self.pokemonCard.pokemonName.text = pokemon.name
+            self.pokemonCard.statusLabel.text = "main: \(pokemon.mainType!.name!), secondary: \(pokemon.secondaryType ?? "batata")"
+            self.pokemonCard.advantageLabel.text = "\(pokemon.mainType!.strength![0])"
+            
+            //UPDATES IN BACKGROUND
+            view.backgroundColor = UIColor(named: "\(pokeType)Background")
+            initSKScene(type: pokeType)
+        }
+    }
+    
+    func fetchStrongestPokemon() {
+       
     }
     
     func setupLocation() {
@@ -94,6 +107,10 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
                         if res.name != "Shuzenji" {
                             print(res.weather[0].main)
 //                            currentWeather = res
+                            DispatchQueue.main.async {
+                                weatherImageView.image = UIImage(named: "\(res.weather[0].main)")
+                            }
+                            
                             UserDefaults.standard.setValue("\(res.weather[0].main)", forKey: "currentWeather")
                         } else {
                             updateWeatherData()
@@ -123,56 +140,14 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
         NSLayoutConstraint.activate([top, leading, trailing, bottom])
     }
     
-    private func initSKScene(){
+    private func initSKScene(type: String){
         let particleScene = ParticleScene(size: CGSize(width: 1080, height: 1920))
         particleScene.scaleMode = .aspectFill
         
         particleScene.backgroundColor = .clear
+        particleScene.setupParticleEmitter(type: type)
         
         skView.presentScene(particleScene)
     }
-    
-//    func requestData(pokeNumber: Int) {
-//        if let url = URL(string: "https://pokeapi.co/api/v2/pokemon/umbreon") {
-//            URLSession.shared.dataTask(with: url) { [self] data, response, error in
-//                if let data = data {
-//                    do {
-//                        let res = try JSONDecoder().decode(PokeResponse.self, from: data)
-//
-//                        DispatchQueue.main.async {
-//                            pokemonCard.pokemonName.text = res.species.name.uppercased()
-//                            pokemonCard.statusLabel.text =
-//                                """
-//                                KKKK SLA A TEMPERATURA FI
-//                                SEU POKEMON TA MENOS MEME HJ
-//                                """.lowercased()
-//                        }
-//                        updateImage(image: res.sprites.other.officialArtwork.front_default)
-//                    } catch {
-//                        print(error)
-//                    }
-//                }
-//            }.resume()
-//        }
-//    }
-//
-//    func updateImage(image: String) {
-//        guard let url = URL(string: image) else { return }
-//        URLSession.shared.dataTask(with: url) { (data, response, error) in
-//            if error != nil {
-//                print(error!)
-//                return
-//            }
-//
-//            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-//                print("Not a proper HTTPURLResponse or statusCode")
-//                return
-//            }
-//
-//            DispatchQueue.main.async {
-//                self.pokemonCard.pokemonImage.image = UIImage(data: data!)
-//            }
-//        }.resume()
-//    }
 
 }

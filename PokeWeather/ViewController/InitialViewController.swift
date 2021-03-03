@@ -19,6 +19,9 @@ class InitialViewController: UIViewController {
     @IBOutlet weak var developerLabel: UILabel!
     @IBOutlet weak var creditsLabel: UILabel!
     
+    var activityIndicator: UIActivityIndicatorView!
+    
+    var success = 0
     
     var types: [PokemonType]?
     
@@ -104,11 +107,14 @@ class InitialViewController: UIViewController {
         print(pokemonValues)
         
         
-        requestPokemonData(value: String(pokemonValues[0]))
-        requestPokemonData(value: String(pokemonValues[1]))
-        requestPokemonData(value: String(pokemonValues[2]))
+        NotificationCenter.default.addObserver(self, selector: #selector(increaseSuccess), name: Notification.Name(rawValue: "SUCCESS_OK"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(changeScreen), name: Notification.Name(rawValue: "SAVED_OK"), object: nil)
+
+        randomDateButton.animateButton(shouldLoad: true, color: randomDateButton.currentTitleColor)
         
-        changeScreen()
+        for i in 0...2 {
+            requestPokemonData(value: String(pokemonValues[i]))
+        }
     }
     
     @IBAction func continueButtonPressed(_ sender: Any) {
@@ -141,19 +147,34 @@ class InitialViewController: UIViewController {
         print(pokemonValues)
         
         
+        NotificationCenter.default.addObserver(self, selector: #selector(increaseSuccess), name: Notification.Name(rawValue: "SUCCESS_OK"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(changeScreen), name: Notification.Name(rawValue: "SAVED_OK"), object: nil)
+
+        continueButton.animateButton(shouldLoad: true, color: continueButton.currentTitleColor)
+        for i in 0...2 {
+            requestPokemonData(value: String(pokemonValues[i]))
+        }
         
-        
-        requestPokemonData(value: String(pokemonValues[0]))
-        requestPokemonData(value: String(pokemonValues[1]))
-        requestPokemonData(value: String(pokemonValues[2]))
-        
-        changeScreen()
+    }
+
+    
+    @objc func changeScreen() {
+        DispatchQueue.main.async { [self] in
+            defaults.setValue(true, forKey: "AcessoPrimeiraVez")
+            performSegue(withIdentifier: "Navigation", sender: nil)
+        }
     }
     
-    func changeScreen() {
-        defaults.setValue(true, forKey: "AcessoPrimeiraVez")
-        
-        performSegue(withIdentifier: "Navigation", sender: nil)
+    @objc func increaseSuccess() {
+        DispatchQueue.main.async { [self] in
+            if success < 2 {
+                success += 1
+                print("incresed")
+            } else if success == 2 {
+                print("done")
+                NotificationCenter.default.post(name: Notification.Name("SAVED_OK"), object: nil)
+            }
+        }
     }
     
     func requestPokemonData(value: String) {
@@ -187,6 +208,7 @@ class InitialViewController: UIViewController {
             }
             
             savePokemonData(pokemonData: pokemonData, pokemonImage: data!)
+            
         }.resume()
     }
     
@@ -218,6 +240,8 @@ class InitialViewController: UIViewController {
         } catch {
             print(error)
         }
+        
+        NotificationCenter.default.post(name: Notification.Name("SUCCESS_OK"), object: nil)
         
     }
     
