@@ -31,7 +31,7 @@
             <objects>
                 <viewController modalTransitionStyle="crossDissolve" id="1XS-qP-sHa" customClass="HomeViewController" customModule="PokeWeather" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cEO-YB-3Fe">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ljz-Vg-huR" customClass="PokemonView" customModule="PokeWeather" customModuleProvider="target">
@@ -79,18 +79,19 @@
                         <viewLayoutGuide key="safeArea" id="qq3-3b-KDb"/>
                         <color key="backgroundColor" red="0.66666666666666663" green="0.87058823529411766" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="Ljz-Vg-huR" firstAttribute="top" secondItem="KM6-DM-cbH" secondAttribute="bottom" constant="105" id="6sR-hX-zR5"/>
                             <constraint firstItem="Ljz-Vg-huR" firstAttribute="centerX" secondItem="cEO-YB-3Fe" secondAttribute="centerX" id="HsN-vQ-BEw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="NC6-2N-3qv" secondAttribute="trailing" constant="37" id="MLc-S8-wNh"/>
                             <constraint firstItem="NC6-2N-3qv" firstAttribute="top" secondItem="cEO-YB-3Fe" secondAttribute="topMargin" constant="22" id="OrT-VU-gTM"/>
                             <constraint firstItem="Qmt-DA-w2q" firstAttribute="top" secondItem="qq3-3b-KDb" secondAttribute="top" constant="22" id="V9G-iH-Z1c"/>
                             <constraint firstItem="qq3-3b-KDb" firstAttribute="bottom" secondItem="Ljz-Vg-huR" secondAttribute="bottom" constant="130" id="fsL-Fx-gAz"/>
                             <constraint firstItem="Qmt-DA-w2q" firstAttribute="leading" secondItem="qq3-3b-KDb" secondAttribute="leading" constant="37" id="gw3-er-FRj"/>
-                            <constraint firstItem="KM6-DM-cbH" firstAttribute="top" secondItem="qq3-3b-KDb" secondAttribute="top" constant="128" id="qsw-eg-GZz"/>
                             <constraint firstItem="KM6-DM-cbH" firstAttribute="centerX" secondItem="cEO-YB-3Fe" secondAttribute="centerX" id="yN5-Zn-L7T"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="le8-rV-enD"/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <connections>
                         <outlet property="pokemonCard" destination="Ljz-Vg-huR" id="K2o-Ni-EZO"/>
                         <outlet property="weatherImageView" destination="Qmt-DA-w2q" id="Myi-wH-KhH"/>

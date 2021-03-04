@@ -34,9 +34,11 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         
         self.navigationController?.navigationBar.isHidden = true
-        self.tabBarController?.tabBar.isTranslucent = true
         self.tabBarController?.tabBar.backgroundColor = .white
         pokemonCard.layer.cornerRadius = pokemonCard.frame.height / 2
+        
+//        self.tabBarController?.tabBar.selectedItem?.image = UIImage(named: "homeOn")?.withRenderingMode(.alwaysOriginal)
+//        self.tabBarController?.tabBar.selectedImage = UIImage(named: "homeOn")?.withRenderingMode(.alwaysOriginal)
         
         setupParticles()
 //        initSKScene()
