@@ -47,6 +47,7 @@
 		4F45271B25E5743600F75C23 /* Navigation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F45271925E5743600F75C23 /* Navigation.storyboard */; };
 		4F45271D25E5743700F75C23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F45271C25E5743700F75C23 /* Assets.xcassets */; };
 		4F45272025E5743700F75C23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F45271E25E5743700F75C23 /* LaunchScreen.storyboard */; };
+		8348EC2025F06BD40085561B /* TeamPokemonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8348EC1F25F06BD40085561B /* TeamPokemonView.xib */; };
 		836C4FEF25ED6CB60016A631 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 836C4FEE25ED6CB60016A631 /* Colors.xcassets */; };
 		83F71A6C25E57AAB002A49BF /* PokeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F71A6B25E57AAB002A49BF /* PokeResponse.swift */; };
 		83F71A6F25E58400002A49BF /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F71A6E25E58400002A49BF /* WeatherResponse.swift */; };
@@ -105,6 +106,7 @@
 		4F45271C25E5743700F75C23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F45271F25E5743700F75C23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F45272125E5743700F75C23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8348EC1F25F06BD40085561B /* TeamPokemonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeamPokemonView.xib; sourceTree = "<group>"; };
 		836C4FEE25ED6CB60016A631 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		83F71A6B25E57AAB002A49BF /* PokeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeResponse.swift; sourceTree = "<group>"; };
 		83F71A6E25E58400002A49BF /* WeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
@@ -171,9 +173,11 @@
 				3077E50325F03A5E000F2697 /* InitialScreenCurvedLabel.xib */,
 				3099639E25F0A7470090ACB2 /* TeamPokemonView.xib */,
 				302B565325EC03CA00AD862C /* PokemonView.xib */,
+				8348EC1F25F06BD40085561B /* TeamPokemonView.xib */,
 				3061CA6025ED6DF2000E0A6B /* InitialScreenCurvedLabelView.swift */,
 				3004F30B25F02CBC00A1FD1E /* TeamPokemonView.swift */,
 				302B564C25EC031D00AD862C /* PokemonView.swift */,
+				3004F30B25F02CBC00A1FD1E /* TeamPokemonView.swift */,
 			);
 			path = XIBs;
 			sourceTree = "<group>";
@@ -322,7 +326,7 @@
 				303F5E6E25ECA25D007F0B38 /* waterParticles.sks in Resources */,
 				3077E4F025F039B4000F2697 /* Team.storyboard in Resources */,
 				3019A59A25E9765D0069464D /* PokemonTypes.json in Resources */,
-				3099639F25F0A7470090ACB2 /* TeamPokemonView.xib in Resources */,
+				8348EC2025F06BD40085561B /* TeamPokemonView.xib in Resources */,
 				3004F31E25F02CEF00A1FD1E /* grassParticles.sks in Resources */,
 				3056BC2A25EE256E00E573D0 /* darkParticles.sks in Resources */,
 				4F45271D25E5743700F75C23 /* Assets.xcassets in Resources */,
