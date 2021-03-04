@@ -8,13 +8,18 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="LoRes.otf">
+            <string>LoRes12OT-Bold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PokemonView" customModule="PokeWeather" customModuleProvider="target">
             <connections>
                 <outlet property="advantageLabel" destination="7vI-IQ-bhl" id="Q6y-Qa-Adf"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="1q7-zQ-ghB"/>
                 <outlet property="pokemonImage" destination="dV7-o0-rbS" id="dYl-iY-6WN"/>
-                <outlet property="pokemonName" destination="nqh-H2-VZT" id="rSC-th-Xmz"/>
+                <outlet property="pokemonName" destination="XdF-Xc-W8m" id="d3C-wo-FVA"/>
                 <outlet property="statusLabel" destination="4DD-Lp-GGf" id="ZbP-sZ-IZT"/>
             </connections>
         </placeholder>
@@ -37,12 +42,9 @@
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HWZ-iE-6Od">
                     <rect key="frame" x="120.5" y="110" width="78.5" height="37.5"/>
                     <subviews>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqh-H2-VZT" userLabel="pokemonName">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XdF-Xc-W8m" userLabel="pokemonName">
                             <rect key="frame" x="0.0" y="0.0" width="48" height="37.5"/>
-                            <accessibility key="accessibilityConfiguration">
-                                <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
-                            </accessibility>
-                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                            <fontDescription key="fontDescription" name="LoRes12OT-Bold" family="LoRes 12 OT" pointSize="30"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>

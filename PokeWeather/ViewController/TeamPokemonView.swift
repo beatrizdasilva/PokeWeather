@@ -40,7 +40,7 @@ class TeamPokemonView: UIView {
     }
     
     private func commonInit() {
-        Bundle.main.loadNibNamed("TeamPokemonView", owner: self, options: nil)
+        Bundle.main.loadNibNamed("TeamPokemonViewNovoNome", owner: self, options: nil)
         addSubview(contentView)
     }
     
