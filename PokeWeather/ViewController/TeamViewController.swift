@@ -36,10 +36,32 @@ class TeamViewController: UIViewController {
     // MARK: Functions
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       
+        
         fetchData()
+        
+        firstPokemonMiniature.backgroundColor = UIColor(named: "\(pokemonData![0].mainType!.name!)Table")
+        firstPokemonMiniature.layer.cornerRadius = firstPokemonMiniature.frame.height / 2
+        
+        secondPokemonMiniature.backgroundColor = UIColor(named: "\(pokemonData![1].mainType!.name!)Table")
+        secondPokemonMiniature.layer.cornerRadius = firstPokemonMiniature.frame.height / 2
+        
+        thirdPokemonMiniature.backgroundColor = UIColor(named: "\(pokemonData![2].mainType!.name!)Table")
+        thirdPokemonMiniature.layer.cornerRadius = firstPokemonMiniature.frame.height / 2
+        
         setupUI()
-        btnLeft.isHidden = true
+        btnLeft.tintColor = .clear
         PokemonCard.layer.cornerRadius = PokemonCard.frame.height / 2
+        
+        
+        firstPokemonMiniature.layer.borderWidth = 3
+        secondPokemonMiniature.layer.borderWidth = 0
+        thirdPokemonMiniature.layer.borderWidth = 0
+        
+        firstPokemonMiniature.layer.borderColor = UIColor(named: "\(pokemonData![0].mainType!.name!)Highlight")?.cgColor
+        secondPokemonMiniature.layer.borderColor = UIColor(named: "\(pokemonData![1].mainType!.name!)Highlight")?.cgColor
+        thirdPokemonMiniature.layer.borderColor = UIColor(named: "\(pokemonData![2].mainType!.name!)Highlight")?.cgColor
     }
     
     func setupUI() {
@@ -50,21 +72,35 @@ class TeamViewController: UIViewController {
         PokemonCard.pokemonSecondType.image = UIImage(named: "\(pokemonData![pokemonIndex].secondaryType!)")
         PokemonCard.pokemonDescription.text = "\(pokemonData![pokemonIndex].name!) is a \(pokemonData![pokemonIndex].mainType!.name!) Pokémon and \(true) days make it stronger.\n\nIts advantage is over \(pokemonData![pokemonIndex].mainType!.strength!) Pokémon, but it has a disadvantage for those of \(true)"
 //        PokemonCard.pokemonArrowIndicator UIImageView
-        
-        btnLeft.isHidden = false
-        btnRight.isHidden = false
-        if pokemonIndex == 0 {
-            btnLeft.isHidden = true
-        }
-        if pokemonIndex == 2 {
-            btnRight.isHidden = true
-        }
+
         
         // Change colors according to the type of pokémon
         self.view.backgroundColor = UIColor(named: "\(pokemonData![pokemonIndex].mainType!.name!)Background")
-        btnLeft.tintColor = UIColor(named: "\(pokemonData![pokemonIndex].mainType!.name!)Highlight")
-        btnRight.tintColor = UIColor(named: "\(pokemonData![pokemonIndex].mainType!.name!)Highlight")
         
+        
+        firstPokemonMiniature.layer.borderWidth = 0
+        secondPokemonMiniature.layer.borderWidth = 0
+        thirdPokemonMiniature.layer.borderWidth = 0
+        
+        if pokemonIndex == 0 {
+            btnLeft.tintColor = .clear
+            btnRight.tintColor = UIColor(named: "\(pokemonData![pokemonIndex].mainType!.name!)Highlight")
+            firstPokemonMiniature.layer.borderWidth = 3
+
+        }
+        
+        if pokemonIndex == 1 {
+            btnLeft.tintColor = UIColor(named: "\(pokemonData![pokemonIndex].mainType!.name!)Highlight")
+            btnRight.tintColor = UIColor(named: "\(pokemonData![pokemonIndex].mainType!.name!)Highlight")
+            secondPokemonMiniature.layer.borderWidth = 3
+        }
+        
+        
+        if pokemonIndex == 2 {
+            btnLeft.tintColor = UIColor(named: "\(pokemonData![pokemonIndex].mainType!.name!)Highlight")
+            btnRight.tintColor = .clear
+            thirdPokemonMiniature.layer.borderWidth = 3
+        }
     }
     
     func fetchData() {
