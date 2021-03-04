@@ -1,9 +1,9 @@
 
 /* Class = "UILabel"; text = "Today your best pokemon is"; ObjectID = "KM6-DM-cbH"; */
-"KM6-DM-cbH.text" = "Today your best pokemon is";
+"KM6-DM-cbH.text" = "Today your best pokémon is";
 
 /* Class = "UIButton"; normalTitle = "Configurações"; ObjectID = "NC6-2N-3qv"; */
-"NC6-2N-3qv.normalTitle" = "Configurações";
+"NC6-2N-3qv.normalTitle" = "Settings";
 
 /* Class = "UITabBarItem"; title = "Home"; ObjectID = "dzh-ZX-1NX"; */
 "dzh-ZX-1NX.title" = "Home";
