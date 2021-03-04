@@ -38,7 +38,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
         pokemonCard.layer.cornerRadius = pokemonCard.frame.height / 2
         
 //        self.tabBarController?.tabBar.selectedItem?.image = UIImage(named: "homeOn")?.withRenderingMode(.alwaysOriginal)
-//        self.tabBarController?.tabBar.selectedImage = UIImage(named: "homeOn")?.withRenderingMode(.alwaysOriginal)
+
         
         setupParticles()
 //        initSKScene()
@@ -64,10 +64,10 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
         DispatchQueue.main.async { [self] in
             
             //UPDATES IN XIB
-            let pokemon = pokemonData![0]
+            let pokemon = pokemonData![2]
             let pokeType = (pokemon.mainType!.name!)
             self.pokemonCard.pokemonImage.image = UIImage(data: pokemon.sprite!)
-            self.pokemonCard.pokemonName.text = pokemon.name
+            self.pokemonCard.pokemonName.text = pokemon.name?.uppercased()
             self.pokemonCard.statusLabel.text = "main: \(pokemon.mainType!.name!), secondary: \(pokemon.secondaryType ?? "batata")"
             self.pokemonCard.advantageLabel.text = "\(pokemon.mainType!.strength![0])"
             

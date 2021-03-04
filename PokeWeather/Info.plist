@@ -64,5 +64,9 @@
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>PokéWeather uses your location to use your local weather information to bring richer data about your Pokémon</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>LoRes.otf</string>
+	</array>
 </dict>
 </plist>

@@ -31,8 +31,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Credits: PokeAPI and Free Code Camp weather API" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ADQ-4w-rsG">
-                                <rect key="frame" x="20" y="852" width="374" height="10"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                <rect key="frame" x="20" y="852.5" width="374" height="9.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="8"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -55,7 +55,7 @@
                                 <accessibility key="accessibilityConfiguration" label="Enter an important date for you">
                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                 </accessibility>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -65,7 +65,7 @@
                                     <constraint firstAttribute="width" constant="180" id="Azx-2Q-FKg"/>
                                     <constraint firstAttribute="height" constant="45" id="dd2-0h-Fyz"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
                                 <state key="normal" title="Continue">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -79,7 +79,7 @@
                                     <constraint firstAttribute="width" constant="180" id="KQu-mS-AQW"/>
                                     <constraint firstAttribute="height" constant="45" id="hOA-Zn-0qv"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
                                 <state key="normal" title="Random Date">
                                     <color key="titleColor" red="0.0" green="0.62352941179999999" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>

@@ -37,7 +37,7 @@
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HWZ-iE-6Od">
                     <rect key="frame" x="120.5" y="110" width="78.5" height="37.5"/>
                     <subviews>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqh-H2-VZT" userLabel="pokemonName">
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqh-H2-VZT" userLabel="pokemonName">
                             <rect key="frame" x="0.0" y="0.0" width="48" height="37.5"/>
                             <accessibility key="accessibilityConfiguration">
                                 <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
