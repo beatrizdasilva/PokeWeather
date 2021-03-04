@@ -15,3 +15,12 @@ struct WeatherResponse: Codable {
     let weather: [Weather]
     let name: String
 }
+
+enum weatherResponse {
+    case clear
+    case rain
+    case thunderstorm
+    case snow
+    case mist
+    case clouds
+}

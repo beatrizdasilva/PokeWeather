@@ -7,6 +7,11 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="LoRes.otf">
+            <string>LoRes12OT-Bold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TeamPokemonView" customModule="PokeWeather" customModuleProvider="target">
             <connections>
@@ -22,119 +27,107 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="354" height="395"/>
+            <rect key="frame" x="0.0" y="0.0" width="354" height="389"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="b" translatesAutoresizingMaskIntoConstraints="NO" id="quE-hL-4FE">
-                    <rect key="frame" x="57" y="-110" width="240" height="215"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <accessibility key="accessibilityConfiguration">
-                        <bool key="isElement" value="YES"/>
-                    </accessibility>
-                </imageView>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T5Y-ks-CvO">
-                    <rect key="frame" x="0.0" y="0.0" width="354" height="395"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="isd-Bf-bLK">
+                    <rect key="frame" x="112.5" y="152.5" width="129.5" height="32"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="IHc-3v-L7s">
-                            <rect key="frame" x="45" y="105" width="264" height="36"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BULBASAUR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7AU-c2-loj">
-                                    <rect key="frame" x="0.0" y="0.0" width="248" height="36"/>
-                                    <accessibility key="accessibilityConfiguration">
-                                        <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
-                                    </accessibility>
-                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="RPj-3d-ubc">
-                                    <rect key="frame" x="248" y="6.5" width="16" height="23"/>
-                                    <accessibility key="accessibilityConfiguration">
-                                        <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
-                                        <bool key="isElement" value="YES"/>
-                                    </accessibility>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="16" id="7va-ju-ZVU"/>
-                                        <constraint firstAttribute="height" constant="25" id="bZL-aT-fQ2"/>
-                                    </constraints>
-                                </imageView>
-                            </subviews>
-                        </stackView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1N2-gm-Gez">
-                            <rect key="frame" x="20" y="204" width="314" height="286.5"/>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vJP-xf-Mef">
+                            <rect key="frame" x="0.0" y="0.0" width="20" height="32"/>
                             <accessibility key="accessibilityConfiguration">
-                                <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
+                                <bool key="isElement" value="YES"/>
                             </accessibility>
-                            <string key="text">Bulbasaur is a Grass Pokémon and sunny days make it stronger.
-
-Its advantage is over Water, Stone and Ground Pokémon, but it has a disadvantage for those of the Ice, Fire, Bug, Poison and Flying type.
-
-Bulbasaur is a Grass Pokémon and sunny days make it stronger.
-
-Its advantage is over Water, Stone and Ground Pokémon, but it has a disadvantage for those of the Ice, Fire, Bug, Poison and Flying type.</string>
-                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="32" id="Ueu-eg-Qsg"/>
+                                <constraint firstAttribute="width" constant="20" id="fWI-H4-ugg"/>
+                            </constraints>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4DM-tm-2mN">
+                            <rect key="frame" x="30" y="0.0" width="20" height="32"/>
+                            <accessibility key="accessibilityConfiguration">
+                                <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
+                                <bool key="isElement" value="YES"/>
+                            </accessibility>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="20" id="Aga-Wy-GOn"/>
+                                <constraint firstAttribute="height" constant="32" id="tnz-m9-ghy"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3000 Kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYE-TI-VWC">
+                            <rect key="frame" x="60" y="5.5" width="69.5" height="21.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="isd-Bf-bLK">
-                            <rect key="frame" x="100" y="156" width="154" height="32"/>
-                            <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="b" translatesAutoresizingMaskIntoConstraints="NO" id="vJP-xf-Mef">
-                                    <rect key="frame" x="0.0" y="0.0" width="20" height="32"/>
-                                    <accessibility key="accessibilityConfiguration">
-                                        <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
-                                        <bool key="isElement" value="YES"/>
-                                    </accessibility>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="32" id="Ueu-eg-Qsg"/>
-                                        <constraint firstAttribute="width" constant="20" id="fWI-H4-ugg"/>
-                                    </constraints>
-                                </imageView>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="b" translatesAutoresizingMaskIntoConstraints="NO" id="4DM-tm-2mN">
-                                    <rect key="frame" x="30" y="0.0" width="20" height="32"/>
-                                    <accessibility key="accessibilityConfiguration">
-                                        <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
-                                        <bool key="isElement" value="YES"/>
-                                    </accessibility>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="20" id="Aga-Wy-GOn"/>
-                                        <constraint firstAttribute="height" constant="32" id="tnz-m9-ghy"/>
-                                    </constraints>
-                                </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3000 Kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYE-TI-VWC">
-                                    <rect key="frame" x="60" y="5.5" width="94" height="21.5"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                        </stackView>
                     </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IHc-3v-L7s">
+                    <rect key="frame" x="77.5" y="110" width="199" height="32.5"/>
+                    <subviews>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BULBASAUR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7AU-c2-loj">
+                            <rect key="frame" x="0.0" y="0.0" width="173" height="32.5"/>
+                            <accessibility key="accessibilityConfiguration">
+                                <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                            </accessibility>
+                            <fontDescription key="fontDescription" name="LoRes12OT-Bold" family="LoRes 12 OT" pointSize="30"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RPj-3d-ubc" userLabel="arrowView">
+                            <rect key="frame" x="183" y="4" width="16" height="25"/>
+                            <accessibility key="accessibilityConfiguration">
+                                <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
+                                <bool key="isElement" value="YES"/>
+                            </accessibility>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="16" id="7va-ju-ZVU"/>
+                                <constraint firstAttribute="height" constant="25" id="bZL-aT-fQ2"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                </stackView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="quE-hL-4FE">
+                    <rect key="frame" x="77" y="-100" width="200" height="200"/>
+                    <accessibility key="accessibilityConfiguration">
+                        <bool key="isElement" value="YES"/>
+                    </accessibility>
                     <constraints>
-                        <constraint firstItem="IHc-3v-L7s" firstAttribute="top" secondItem="QFh-Dy-cHf" secondAttribute="top" constant="105" id="Evr-IB-7T8" userLabel="Stack View.top = Frame Layout Guide.top + 20"/>
-                        <constraint firstItem="isd-Bf-bLK" firstAttribute="top" secondItem="IHc-3v-L7s" secondAttribute="bottom" constant="15" id="GWi-hM-apW"/>
-                        <constraint firstItem="QFh-Dy-cHf" firstAttribute="trailing" secondItem="IHc-3v-L7s" secondAttribute="trailing" constant="45" id="JUJ-tB-aJL"/>
-                        <constraint firstItem="1N2-gm-Gez" firstAttribute="top" secondItem="isd-Bf-bLK" secondAttribute="bottom" constant="16" id="a8J-xP-Mm8"/>
-                        <constraint firstItem="isd-Bf-bLK" firstAttribute="leading" secondItem="QFh-Dy-cHf" secondAttribute="leading" constant="100" id="gZN-Qu-sb2" userLabel="Stack View.leading = Frame Layout Guide.leading + 80"/>
-                        <constraint firstItem="QFh-Dy-cHf" firstAttribute="trailing" secondItem="isd-Bf-bLK" secondAttribute="trailing" constant="100" id="jxb-4x-TCu" userLabel="Frame Layout Guide.trailing = Stack View.trailing + 80"/>
-                        <constraint firstItem="QFh-Dy-cHf" firstAttribute="trailing" secondItem="1N2-gm-Gez" secondAttribute="trailing" constant="20" id="n2S-CH-9N3"/>
-                        <constraint firstItem="1N2-gm-Gez" firstAttribute="leading" secondItem="QFh-Dy-cHf" secondAttribute="leading" constant="20" id="qau-mE-sy6"/>
-                        <constraint firstItem="IHc-3v-L7s" firstAttribute="leading" secondItem="QFh-Dy-cHf" secondAttribute="leading" constant="45" id="rcG-Vu-3W9"/>
+                        <constraint firstAttribute="height" constant="200" id="3oQ-vi-T56"/>
+                        <constraint firstAttribute="width" constant="200" id="eqo-6A-ZJl"/>
                     </constraints>
-                    <viewLayoutGuide key="contentLayoutGuide" id="4A0-tM-2ZJ"/>
-                    <viewLayoutGuide key="frameLayoutGuide" id="QFh-Dy-cHf"/>
-                </scrollView>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1N2-gm-Gez">
+                    <rect key="frame" x="8" y="192" width="338" height="193"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <accessibility key="accessibilityConfiguration">
+                        <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                    </accessibility>
+                    <string key="text">Bulbasaur is a Grass Pokémon and sunny days make it stronger.
+
+Its advantage is over Water, Stone and Ground Pokémon, but it has a disadvantage for those of the Ice, Fire, Bug, Poison and Flying type.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                    <string key="userLabel">Bulbasaur is a Grass Pokémon and sunny days make it stronger.  Its advantage is over Water, Stone and Ground Pokémon, but it has a disadvantage for those of the Ice, Fire, Bug, Poison and Flying type.  Bulbasaur is a Grass Pokémon and sunny days make it stronger.  Its advantage is over Water, Stone and Ground Pokémon, but it has a disadvantage for those of the Ice, Fire, Bug, Poison and Flying type.</string>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="IHc-3v-L7s" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="IJU-YT-9ns"/>
+                <constraint firstItem="isd-Bf-bLK" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="QZq-1a-O3F"/>
+                <constraint firstItem="quE-hL-4FE" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="-100" id="RrV-Ui-zcG"/>
+                <constraint firstItem="IHc-3v-L7s" firstAttribute="top" secondItem="quE-hL-4FE" secondAttribute="bottom" constant="10" id="ZuP-Np-x8g"/>
+                <constraint firstItem="quE-hL-4FE" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="et1-Fd-pcX"/>
+                <constraint firstItem="isd-Bf-bLK" firstAttribute="top" secondItem="IHc-3v-L7s" secondAttribute="bottom" constant="10" id="zlm-fl-1f7"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="131.15942028985509" y="126.89732142857142"/>
+            <point key="canvasLocation" x="130.43478260869566" y="124.88839285714285"/>
         </view>
     </objects>
     <resources>
-        <image name="arrow.up" catalog="system" width="120" height="128"/>
-        <image name="b" width="215" height="215"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

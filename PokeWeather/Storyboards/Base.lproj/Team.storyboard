@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -36,7 +35,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UMM-Kj-eYk" customClass="TeamPokemonView" customModule="PokeWeather" customModuleProvider="target">
-                                <rect key="frame" x="30" y="306" width="354" height="395"/>
+                                <rect key="frame" x="30" y="313" width="354" height="395"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="354" id="4Bq-NN-Tn4"/>
@@ -44,7 +43,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My team" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jmd-bi-m2Y">
-                                <rect key="frame" x="160" y="69" width="94" height="29"/>
+                                <rect key="frame" x="162" y="69" width="90.5" height="26.5"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                 </accessibility>
@@ -85,17 +84,6 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6oF-qN-0u1">
-                                <rect key="frame" x="350" y="44" width="44" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="44" id="BAo-WE-HAY"/>
-                                    <constraint firstAttribute="height" constant="44" id="sYR-6n-wSV"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal">
-                                    <imageReference key="image" image="square.and.arrow.up" catalog="system" symbolScale="large"/>
-                                </state>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="W8q-sk-Ap9" userLabel="Main Stack View">
                                 <rect key="frame" x="48" y="120.5" width="318" height="64"/>
                                 <subviews>
@@ -186,13 +174,11 @@
                             <constraint firstItem="QLb-Jt-toM" firstAttribute="centerX" secondItem="dRQ-nl-gZc" secondAttribute="centerX" id="8r0-o6-1Yl"/>
                             <constraint firstItem="W8q-sk-Ap9" firstAttribute="top" secondItem="jmd-bi-m2Y" secondAttribute="bottom" constant="25" id="GiQ-gh-B1f"/>
                             <constraint firstItem="W8q-sk-Ap9" firstAttribute="centerX" secondItem="dRQ-nl-gZc" secondAttribute="centerX" id="KQK-PT-99v"/>
-                            <constraint firstItem="9Xo-oA-Adb" firstAttribute="bottom" secondItem="UMM-Kj-eYk" secondAttribute="bottom" constant="112" id="RhM-GU-UJK"/>
+                            <constraint firstItem="9Xo-oA-Adb" firstAttribute="bottom" secondItem="UMM-Kj-eYk" secondAttribute="bottom" constant="105" id="RhM-GU-UJK"/>
                             <constraint firstItem="UMM-Kj-eYk" firstAttribute="centerX" secondItem="dRQ-nl-gZc" secondAttribute="centerX" id="Wl8-Ud-eL5"/>
-                            <constraint firstItem="6oF-qN-0u1" firstAttribute="top" secondItem="9Xo-oA-Adb" secondAttribute="top" id="e0t-tv-TYo"/>
                             <constraint firstItem="jmd-bi-m2Y" firstAttribute="top" secondItem="9Xo-oA-Adb" secondAttribute="top" constant="25" id="exR-EI-wyn"/>
                             <constraint firstItem="jmd-bi-m2Y" firstAttribute="centerX" secondItem="dRQ-nl-gZc" secondAttribute="centerX" id="f8k-if-fko"/>
                             <constraint firstItem="9Xo-oA-Adb" firstAttribute="bottom" secondItem="QLb-Jt-toM" secondAttribute="bottom" constant="468" id="fKf-su-6Ew"/>
-                            <constraint firstItem="9Xo-oA-Adb" firstAttribute="trailing" secondItem="6oF-qN-0u1" secondAttribute="trailing" constant="20" id="nNp-0x-eNG"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qDE-XA-Nf8"/>
@@ -204,7 +190,6 @@
                         <outlet property="firstPokemonMiniature" destination="kbd-8D-VmH" id="uf2-9z-NyX"/>
                         <outlet property="secondPokemonArrow" destination="P0M-JI-B8P" id="t1K-tz-qdd"/>
                         <outlet property="secondPokemonMiniature" destination="9G0-Ka-suD" id="LCY-O1-V0x"/>
-                        <outlet property="shareYourTeam" destination="6oF-qN-0u1" id="mrs-pk-25C"/>
                         <outlet property="thirdPokemonArrow" destination="3B3-69-gG1" id="wp5-iX-Sqd"/>
                         <outlet property="thirdPokemonMiniature" destination="RBD-SZ-A0p" id="DW2-0R-WIq"/>
                     </connections>
@@ -220,7 +205,6 @@
         <image name="b" width="215" height="215"/>
         <image name="left" width="115.08999633789062" height="151.91000366210938"/>
         <image name="right" width="115.08999633789062" height="151.91000366210938"/>
-        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <image name="teamOff" width="25" height="25"/>
         <image name="teamOn" width="25" height="25"/>
         <systemColor name="systemBackgroundColor">
