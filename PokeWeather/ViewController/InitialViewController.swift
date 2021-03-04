@@ -106,8 +106,6 @@ class InitialViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(increaseSuccess), name: Notification.Name(rawValue: "SUCCESS_OK"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(changeScreen), name: Notification.Name(rawValue: "SAVED_OK"), object: nil)
-
-        randomDateButton.animateButton(shouldLoad: true, color: randomDateButton.currentTitleColor)
         
         for i in 0...2 {
             requestPokemonData(value: String(pokemonValues[i]))
@@ -147,7 +145,6 @@ class InitialViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(increaseSuccess), name: Notification.Name(rawValue: "SUCCESS_OK"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(changeScreen), name: Notification.Name(rawValue: "SAVED_OK"), object: nil)
 
-        continueButton.animateButton(shouldLoad: true, color: continueButton.currentTitleColor)
         for i in 0...2 {
             requestPokemonData(value: String(pokemonValues[i]))
         }
@@ -219,7 +216,9 @@ class InitialViewController: UIViewController {
         newPokemon.name = pokemonData.species.name
         newPokemon.number = Int64(pokemonData.id)
         newPokemon.sprite = pokemonImage
-        newPokemon.weight = Float(pokemonData.weight)
+        newPokemon.weight = String(Float(pokemonData.weight) / 10)
+        
+        print(newPokemon.weight)
         
         newPokemon.mainType = (types![0]) //insert into a real table
         

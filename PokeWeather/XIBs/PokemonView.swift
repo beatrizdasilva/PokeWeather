@@ -14,6 +14,7 @@ class PokemonView: UIView {
     @IBOutlet weak var pokemonName: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var advantageLabel: UILabel!
+    @IBOutlet weak var statusArrow: UIImageView!
     
     /*
     // Only override draw() if you perform custom drawing.
@@ -30,7 +31,7 @@ class PokemonView: UIView {
         contentView.layer.cornerRadius = 40
         
         pokemonImage.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 0).isActive = true
-        advantageLabel.text = "meme ipsum"
+        
         
         contentView.layer.shadowColor = UIColor.black.cgColor
         contentView.layer.shadowRadius = 15
