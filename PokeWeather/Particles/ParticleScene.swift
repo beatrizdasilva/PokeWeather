@@ -15,7 +15,7 @@ class ParticleScene: SKScene {
     
     //starting from above -50, from below -1920, from middle /2.
     func setupParticleEmitter(type: String) {
-        let particleEmitter = SKEmitterNode(fileNamed: "waterParticles")!
+        let particleEmitter = SKEmitterNode(fileNamed: "ghostParticles")!
         particleEmitter.position = CGPoint(x: size.width/2, y: size.height - 50)
         addChild(particleEmitter)
     }

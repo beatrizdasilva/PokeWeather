@@ -8,7 +8,7 @@
 import UIKit
 
 class PokemonView: UIView {
-
+    // MARK: - Outlets
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var pokemonImage: UIImageView!
     @IBOutlet weak var pokemonName: UILabel!
@@ -23,7 +23,9 @@ class PokemonView: UIView {
     }
     */
     
+    // MARK: - Functions
     override func awakeFromNib() {
+        setAccessibility()
         contentView.isUserInteractionEnabled = false
         contentView.layer.cornerRadius = 40
         
@@ -51,4 +53,22 @@ class PokemonView: UIView {
         commonInit()
     }
 
+}
+
+// MARK: - Accessibility
+extension PokemonView {
+    func setAccessibility() {
+        pokemonImage.accessibilityLabel = "\(pokemonName.text ?? "pokemon")"
+        pokemonImage.accessibilityTraits = UIAccessibilityTraits.image
+
+        pokemonName.accessibilityLabel = "\(pokemonName.text!)"
+        pokemonName.accessibilityTraits = UIAccessibilityTraits.staticText
+        
+        // Colocar variável de tempo e tipo do pokemon
+        statusLabel.accessibilityLabel = "What a [rainy, weather type] day!\nYour [pokemon type] Pokémon is stronger today."
+        statusLabel.accessibilityTraits = UIAccessibilityTraits.staticText
+        
+        advantageLabel.accessibilityLabel = "It has an advantage in \(advantageLabel.text!)."
+        advantageLabel.accessibilityTraits = UIAccessibilityTraits.staticText
+    }
 }

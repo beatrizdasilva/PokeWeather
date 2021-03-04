@@ -166,12 +166,12 @@
 		3061CA5425ED6BEF000E0A6B /* XIBs */ = {
 			isa = PBXGroup;
 			children = (
-				3004F30B25F02CBC00A1FD1E /* TeamPokemonView.swift */,
-				8348EC1F25F06BD40085561B /* TeamPokemonView.xib */,
 				3077E50325F03A5E000F2697 /* InitialScreenCurvedLabel.xib */,
 				302B565325EC03CA00AD862C /* PokemonView.xib */,
+				8348EC1F25F06BD40085561B /* TeamPokemonView.xib */,
 				3061CA6025ED6DF2000E0A6B /* InitialScreenCurvedLabelView.swift */,
 				302B564C25EC031D00AD862C /* PokemonView.swift */,
+				3004F30B25F02CBC00A1FD1E /* TeamPokemonView.swift */,
 			);
 			path = XIBs;
 			sourceTree = "<group>";
