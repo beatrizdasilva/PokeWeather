@@ -9,48 +9,45 @@ import UIKit
 import CoreData
 
 class InitialViewController: UIViewController {
+    // MARK: - Variables
+    var activityIndicator: UIActivityIndicatorView!
+    var success = 0
+    var types: [PokemonType]?
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    let defaults = UserDefaults.standard
+    var pokemonValues: [String.SubSequence] = []
     
+    
+    // MARK: - Outlets
     @IBOutlet var curvedCard: UIView!
     @IBOutlet weak var datePicker: UIDatePicker!
-    
+
     @IBOutlet weak var randomDateButton: UIButton!
     @IBOutlet weak var continueButton: UIButton!
     
     @IBOutlet weak var developerLabel: UILabel!
     @IBOutlet weak var creditsLabel: UILabel!
-    
-    var activityIndicator: UIActivityIndicatorView!
-    
-    var success = 0
-    
-    var types: [PokemonType]?
-    
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
-    let defaults = UserDefaults.standard
-    
-    var pokemonValues: [String.SubSequence] = []
-    
+
+
+    // MARK: - Functions
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupUI()
     }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is UITabBarController  {
             let vc = segue.destination as? UITabBarController
         }
     }
     
     func setupUI() {
-        
         let boldText = "Developed by: "
         let attrs = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 8)]
         let developerFinalLabel = NSMutableAttributedString(string:boldText, attributes:attrs)
         
-        let normalText = "Beatriz Silva, Juliana Machado e Kauê Sales"
+        let normalText = "Beatriz da Silva, Juliana Machado e Kauê Sales"
         let normalString = NSMutableAttributedString(string:normalText)
         
         developerFinalLabel.append(normalString)
@@ -262,3 +259,21 @@ class InitialViewController: UIViewController {
 }
 
 
+// MARK: - Accessibility
+extension InitialViewController {
+    func setAccessibility() {
+        randomDateButton.accessibilityLabel = "Random Date"
+        randomDateButton.accessibilityHint = "Double tap to generate a random date."
+        randomDateButton.accessibilityTraits = UIAccessibilityTraits.button
+        
+        continueButton.accessibilityLabel = "Continue"
+        continueButton.accessibilityHint = "Double tap to confirm the date you entered in the datepicker."
+        continueButton.accessibilityTraits = UIAccessibilityTraits.button
+        
+        developerLabel.accessibilityLabel = "Developed by Beatriz da Silva, Juliana Machado and Kauê Sales"
+        developerLabel.accessibilityTraits = UIAccessibilityTraits.staticText
+
+        creditsLabel.accessibilityLabel = "Credits to PokeAPI and Free Code Camp weather API"
+        creditsLabel.accessibilityTraits = UIAccessibilityTraits.staticText
+    }
+}

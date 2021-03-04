@@ -8,13 +8,13 @@ import UIKit
 import CoreData
 
 class TeamViewController: UIViewController {
-    // MARK: Variables
+    // MARK: - Variables
     var pokemonIndex = 0
     var pokemonData: [Pokemon]?
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     
-    // MARK: Outlets
+    // MARK: - Outlets
     @IBOutlet weak var PokemonCard: TeamPokemonView!
     @IBOutlet weak var firstPokemonMiniature: UIImageView!
     @IBOutlet weak var secondPokemonMiniature: UIImageView!
@@ -25,19 +25,11 @@ class TeamViewController: UIViewController {
     @IBOutlet weak var shareYourTeam: UIButton!
     @IBOutlet weak var btnLeft: UIButton!
     @IBOutlet weak var btnRight: UIButton!
-    @IBAction func btnPrevious(_ sender: Any) {
-        decrease()
-    }
-    @IBAction func btnNext(_ sender: Any) {
-        increase()
-    }
     
     
-    // MARK: Functions
+    // MARK: - Functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-       
         
         fetchData()
         
@@ -54,7 +46,6 @@ class TeamViewController: UIViewController {
         btnLeft.tintColor = .clear
         PokemonCard.layer.cornerRadius = PokemonCard.frame.height / 2
         
-        
         firstPokemonMiniature.layer.borderWidth = 3
         secondPokemonMiniature.layer.borderWidth = 0
         thirdPokemonMiniature.layer.borderWidth = 0
@@ -62,6 +53,9 @@ class TeamViewController: UIViewController {
         firstPokemonMiniature.layer.borderColor = UIColor(named: "\(pokemonData![0].mainType!.name!)Highlight")?.cgColor
         secondPokemonMiniature.layer.borderColor = UIColor(named: "\(pokemonData![1].mainType!.name!)Highlight")?.cgColor
         thirdPokemonMiniature.layer.borderColor = UIColor(named: "\(pokemonData![2].mainType!.name!)Highlight")?.cgColor
+        
+        // calls setAccessibility from TeamViewController
+        setAccessibility()
     }
     
     func setupUI() {
@@ -71,12 +65,11 @@ class TeamViewController: UIViewController {
         PokemonCard.pokemonFirstType.image = UIImage(named: "\(pokemonData![pokemonIndex].mainType!.name!)")
         PokemonCard.pokemonSecondType.image = UIImage(named: "\(pokemonData![pokemonIndex].secondaryType!)")
         PokemonCard.pokemonDescription.text = "\(pokemonData![pokemonIndex].name!) is a \(pokemonData![pokemonIndex].mainType!.name!) Pokémon and \(true) days make it stronger.\n\nIts advantage is over \(pokemonData![pokemonIndex].mainType!.strength!) Pokémon, but it has a disadvantage for those of \(true)"
-//        PokemonCard.pokemonArrowIndicator UIImageView
-
+        //        PokemonCard.pokemonArrowIndicator UIImageView
+        
         
         // Change colors according to the type of pokémon
         self.view.backgroundColor = UIColor(named: "\(pokemonData![pokemonIndex].mainType!.name!)Background")
-        
         
         firstPokemonMiniature.layer.borderWidth = 0
         secondPokemonMiniature.layer.borderWidth = 0
@@ -86,7 +79,7 @@ class TeamViewController: UIViewController {
             btnLeft.tintColor = .clear
             btnRight.tintColor = UIColor(named: "\(pokemonData![pokemonIndex].mainType!.name!)Highlight")
             firstPokemonMiniature.layer.borderWidth = 3
-
+            
         }
         
         if pokemonIndex == 1 {
@@ -95,12 +88,14 @@ class TeamViewController: UIViewController {
             secondPokemonMiniature.layer.borderWidth = 3
         }
         
-        
         if pokemonIndex == 2 {
             btnLeft.tintColor = UIColor(named: "\(pokemonData![pokemonIndex].mainType!.name!)Highlight")
             btnRight.tintColor = .clear
             thirdPokemonMiniature.layer.borderWidth = 3
         }
+        
+        // Calls setAccessibility from TeamPokemonView
+        PokemonCard.setAccessibility()
     }
     
     func fetchData() {
@@ -119,6 +114,13 @@ class TeamViewController: UIViewController {
         }
     }
     
+    @IBAction func btnPrevious(_ sender: Any) {
+        decrease()
+    }
+    @IBAction func btnNext(_ sender: Any) {
+        increase()
+    }
+    
     func decrease() {
         if pokemonIndex > 0 {
             pokemonIndex -= 1
@@ -135,4 +137,42 @@ class TeamViewController: UIViewController {
         print(pokemonIndex)
     }
     
+}
+
+// MARK: - Accessibility
+extension TeamViewController {
+    func setAccessibility() {
+        firstPokemonMiniature.accessibilityLabel = "\(pokemonData![0].name ?? "pokemon") miniature"
+        firstPokemonMiniature.accessibilityTraits = UIAccessibilityTraits.image
+        
+        secondPokemonMiniature.accessibilityLabel = "\(pokemonData![1].name ?? "pokemon") miniature"
+        secondPokemonMiniature.accessibilityTraits = UIAccessibilityTraits.image
+        
+        thirdPokemonMiniature.accessibilityLabel = "\(pokemonData![2].name ?? "pokemon") miniature"
+        thirdPokemonMiniature.accessibilityTraits = UIAccessibilityTraits.image
+        
+        /* Como renomear as setas?
+        firstPokemonArrow.accessibilityLabel = "arrowUpOrDown image"
+        firstPokemonArrow.accessibilityTraits = UIAccessibilityTraits.image
+        
+        secondPokemonArrow.accessibilityLabel = "arrowUpOrDown image"
+        secondPokemonArrow.accessibilityTraits = UIAccessibilityTraits.image
+        
+        thirdPokemonArrow.accessibilityLabel = "arrowUpOrDown image"
+        thirdPokemonArrow.accessibilityTraits = UIAccessibilityTraits.image
+        */
+        
+        shareYourTeam.accessibilityLabel = "Share your team"
+        shareYourTeam.accessibilityHint = "Double tap to share your team on social media."
+        shareYourTeam.accessibilityTraits = UIAccessibilityTraits.button
+        
+        /* VoiceOver lê o botão quando ele esta invisível, pq ele ainda está lá */
+        btnLeft.accessibilityLabel = "Previous"
+        btnLeft.accessibilityHint = "Double tap to see the previous member of your Pokémon team."
+        btnLeft.accessibilityTraits = UIAccessibilityTraits.button
+        
+        btnRight.accessibilityLabel = "Next"
+        btnRight.accessibilityHint = "Double tap to see the next member of your Pokémon team."
+        btnRight.accessibilityTraits = UIAccessibilityTraits.button
+    }
 }

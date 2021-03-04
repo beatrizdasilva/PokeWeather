@@ -15,20 +15,21 @@ protocol ParticleEmitterDelegate {
 }
 
 class HomeViewController: UIViewController, CLLocationManagerDelegate {
-    
+    // MARK: - Variables
     var pokemonData: [Pokemon]?
-    @IBOutlet weak var weatherImageView: UIImageView!
     var particleEmitterDelegate: ParticleEmitterDelegate?
-    
+    var currentLocation: CLLocation?
     let locationManager = (UIApplication.shared.delegate as! AppDelegate).locationManager
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
     private let skView = SKView()
     
+    
+    // MARK: - Outlets
+    @IBOutlet weak var weatherImageView: UIImageView!
     @IBOutlet weak var pokemonCard: PokemonView!
-    var currentLocation: CLLocation?
     
     
+    // MARK: - Functions
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -54,7 +55,6 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
             print(pokemonData?.count)
             
             updateUI()
-            
         } catch {
             print(error)
         }
@@ -74,6 +74,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
             //UPDATES IN BACKGROUND
             view.backgroundColor = UIColor(named: "\(pokeType)Background")
             initSKScene(type: pokeType)
+            pokemonCard.setAccessibility()
         }
     }
     
@@ -153,4 +154,14 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
         skView.presentScene(particleScene)
     }
 
+}
+
+// MARK: - Accessibility
+extension HomeViewController {
+    func setAccessibility() {
+        // Como pegar o nome do clima que está fazendo?
+        weatherImageView.accessibilityLabel = ""
+        weatherImageView.accessibilityTraits = UIAccessibilityTraits.image
+        
+    }
 }

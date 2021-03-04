@@ -13,6 +13,7 @@ protocol TeamPokemonViewDelegate {
 }
 
 class TeamPokemonView: UIView {
+    // MARK: - Outlets
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var pokemonImage: UIImageView!
     @IBOutlet weak var pokemonName: UILabel!
@@ -22,6 +23,7 @@ class TeamPokemonView: UIView {
     @IBOutlet weak var pokemonWeight: UILabel!
     @IBOutlet weak var pokemonDescription: UILabel!
     
+    // MARK: - Functions
     override func awakeFromNib() {
         contentView.isUserInteractionEnabled = true
         contentView.layer.cornerRadius = 40
@@ -34,6 +36,7 @@ class TeamPokemonView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
+        setAccessibility()
     }
     
     private func commonInit() {
@@ -45,6 +48,28 @@ class TeamPokemonView: UIView {
         super.init(coder: aDecoder)
         commonInit()
     }
-    
 
+}
+
+
+// MARK: - Accessibility
+extension TeamPokemonView {
+    func setAccessibility() {
+        pokemonImage.accessibilityLabel = "\(pokemonName.text!)"
+        pokemonImage.accessibilityTraits = UIAccessibilityTraits.image
+        
+        pokemonName.accessibilityLabel = "\(pokemonName.text!)"
+        pokemonName.accessibilityTraits = UIAccessibilityTraits.staticText
+        
+        // Arrow indicator image
+        pokemonArrowIndicator.accessibilityLabel = "arrow up/down"
+        pokemonArrowIndicator.accessibilityTraits = UIAccessibilityTraits.image
+        
+        // Trazer info de tipo pra cá
+        pokemonFirstType.accessibilityLabel = ""
+        pokemonFirstType.accessibilityTraits = UIAccessibilityTraits.image
+        
+        pokemonSecondType.accessibilityLabel = ""
+        pokemonSecondType.accessibilityTraits = UIAccessibilityTraits.image
+    }
 }
