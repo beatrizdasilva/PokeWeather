@@ -25,14 +25,14 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developed by: Beatriz Silva, Juliana Machado e Kauê Sales." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Zc-no-b5a">
-                                <rect key="frame" x="20" y="840" width="374" height="10"/>
+                                <rect key="frame" x="20" y="840.5" width="374" height="10"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="8"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Credits: PokeAPI and Free Code Camp weather API" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ADQ-4w-rsG">
-                                <rect key="frame" x="20" y="852" width="374" height="10"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                <rect key="frame" x="20" y="852.5" width="374" height="9.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="8"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -51,8 +51,8 @@
                                 </date>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter an important date for you" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQf-aI-ypV">
-                                <rect key="frame" x="71" y="375" width="272" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <rect key="frame" x="67.5" y="375" width="279" height="24"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -62,7 +62,7 @@
                                     <constraint firstAttribute="width" constant="180" id="Azx-2Q-FKg"/>
                                     <constraint firstAttribute="height" constant="45" id="dd2-0h-Fyz"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
                                 <state key="normal" title="Continue">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -76,7 +76,7 @@
                                     <constraint firstAttribute="width" constant="180" id="KQu-mS-AQW"/>
                                     <constraint firstAttribute="height" constant="45" id="hOA-Zn-0qv"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
                                 <state key="normal" title="Random Date">
                                     <color key="titleColor" red="0.0" green="0.62352941179999999" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>

@@ -12,7 +12,12 @@
         <scene sceneID="zXk-Jy-hzb">
             <objects>
                 <navigationController storyboardIdentifier="home" id="jnY-h0-cCU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" id="dzh-ZX-1NX"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="Home" image="homeOff" id="dzh-ZX-1NX">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="homeOn"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8Mi-ZF-jdh">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -43,8 +48,8 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today your best pokemon is" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KM6-DM-cbH">
-                                <rect key="frame" x="64.5" y="222.5" width="285" height="26.5"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <rect key="frame" x="59.5" y="222.5" width="295" height="26.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -105,6 +110,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="homeOff" width="25" height="22.5"/>
+        <image name="homeOn" width="25" height="22.5"/>
         <image name="settings" width="126.02999877929688" height="126.02999877929688"/>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

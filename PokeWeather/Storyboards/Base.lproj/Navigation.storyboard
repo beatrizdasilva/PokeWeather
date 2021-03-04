@@ -10,10 +10,11 @@
         <scene sceneID="pFz-8M-YON">
             <objects>
                 <tabBarController storyboardIdentifier="NavigationStoryboard" modalPresentationStyle="fullScreen" id="TIk-CG-6AN" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="fill" id="J9C-R7-F7D">
+                    <tabBar key="tabBar" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="J9C-R7-F7D">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="SNP-K4-JyS" kind="relationship" relationship="viewControllers" id="vXw-6A-csU"/>

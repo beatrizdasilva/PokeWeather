@@ -13,7 +13,7 @@
         <scene sceneID="WpH-wS-pts">
             <objects>
                 <navigationController storyboardIdentifier="team" navigationBarHidden="YES" id="vqs-dm-PcV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Team" id="KYU-jm-YvX"/>
+                    <tabBarItem key="tabBarItem" title="Team" image="teamOff" selectedImage="teamOn" id="KYU-jm-YvX"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fI4-pf-Jsf">
@@ -44,8 +44,8 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My team" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jmd-bi-m2Y">
-                                <rect key="frame" x="160" y="69" width="94" height="29"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <rect key="frame" x="162" y="69" width="90.5" height="26.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -94,7 +94,7 @@
                                 </state>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="W8q-sk-Ap9" userLabel="Main Stack View">
-                                <rect key="frame" x="48" y="123" width="318" height="64"/>
+                                <rect key="frame" x="48" y="120.5" width="318" height="64"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="kQt-Re-Tsc" userLabel="First Stack View">
                                         <rect key="frame" x="0.0" y="0.0" width="86" height="64"/>
@@ -194,6 +194,8 @@
         <image name="left" width="115.08999633789062" height="151.91000366210938"/>
         <image name="right" width="115.08999633789062" height="151.91000366210938"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <image name="teamOff" width="25" height="25"/>
+        <image name="teamOn" width="25" height="25"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
