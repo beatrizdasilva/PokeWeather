@@ -47,7 +47,7 @@
                                     <constraint firstAttribute="height" constant="329" id="VXL-2y-rIS"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today your best pokemon is" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KM6-DM-cbH">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today your best pokemon is" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KM6-DM-cbH">
                                 <rect key="frame" x="59.5" y="187.5" width="295" height="26.5"/>
                                 <accessibility key="accessibilityConfiguration" label="Today your best pokemon is">
                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
@@ -68,13 +68,26 @@
                                     <constraint firstAttribute="width" constant="50" id="lRT-gK-arv"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdE-MZ-pER">
+                                <rect key="frame" x="327" y="66" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="bYe-zL-zWl"/>
+                                    <constraint firstAttribute="height" constant="50" id="pK4-TO-JOh"/>
+                                </constraints>
+                                <state key="normal" image="settings"/>
+                                <connections>
+                                    <segue destination="51t-ud-FdL" kind="presentation" id="SOO-pd-4H2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qq3-3b-KDb"/>
                         <color key="backgroundColor" red="0.66666666666666663" green="0.87058823529411766" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="rdE-MZ-pER" firstAttribute="top" secondItem="qq3-3b-KDb" secondAttribute="top" constant="22" id="2mN-y2-ggN"/>
                             <constraint firstItem="Ljz-Vg-huR" firstAttribute="top" secondItem="KM6-DM-cbH" secondAttribute="bottom" constant="140" id="6sR-hX-zR5"/>
                             <constraint firstItem="Ljz-Vg-huR" firstAttribute="centerX" secondItem="cEO-YB-3Fe" secondAttribute="centerX" id="HsN-vQ-BEw"/>
                             <constraint firstItem="Qmt-DA-w2q" firstAttribute="top" secondItem="qq3-3b-KDb" secondAttribute="top" constant="22" id="V9G-iH-Z1c"/>
+                            <constraint firstItem="qq3-3b-KDb" firstAttribute="trailing" secondItem="rdE-MZ-pER" secondAttribute="trailing" constant="37" id="VgH-0T-Of6"/>
                             <constraint firstItem="qq3-3b-KDb" firstAttribute="bottom" secondItem="Ljz-Vg-huR" secondAttribute="bottom" constant="130" id="fsL-Fx-gAz"/>
                             <constraint firstItem="Qmt-DA-w2q" firstAttribute="leading" secondItem="qq3-3b-KDb" secondAttribute="leading" constant="37" id="gw3-er-FRj"/>
                             <constraint firstItem="KM6-DM-cbH" firstAttribute="centerX" secondItem="cEO-YB-3Fe" secondAttribute="centerX" id="yN5-Zn-L7T"/>
@@ -85,6 +98,8 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <connections>
                         <outlet property="pokemonCard" destination="Ljz-Vg-huR" id="K2o-Ni-EZO"/>
+                        <outlet property="settingsBtn" destination="rdE-MZ-pER" id="FMp-uo-bCT"/>
+                        <outlet property="strongestPokemonLabel" destination="KM6-DM-cbH" id="Zj2-jC-dKp"/>
                         <outlet property="weatherImageView" destination="Qmt-DA-w2q" id="Myi-wH-KhH"/>
                     </connections>
                 </viewController>
@@ -106,6 +121,7 @@
     <resources>
         <image name="homeOff" width="25" height="22.5"/>
         <image name="homeOn" width="25" height="22.5"/>
+        <image name="settings" width="126.02999877929688" height="126.02999877929688"/>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

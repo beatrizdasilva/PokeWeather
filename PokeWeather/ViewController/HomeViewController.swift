@@ -21,6 +21,8 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
     var weatherNow: weatherResponse = .clouds
     private let skView = SKView()
     var weatherTypeToday: String?
+    @IBOutlet weak var settingsBtn: UIButton!
+    @IBOutlet weak var strongestPokemonLabel: UILabel!
     
     
     // MARK: - Outlets
@@ -35,6 +37,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
         self.navigationController?.navigationBar.isHidden = true
         self.tabBarController?.tabBar.backgroundColor = .white
         pokemonCard.layer.cornerRadius = pokemonCard.frame.height / 2
+        strongestPokemonLabel.layer.shadowRadius = 10
         
         setupLocation()
         setupParticles()
@@ -45,8 +48,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
             let request = Pokemon.fetchRequest() as NSFetchRequest<Pokemon>
             
             self.pokemonData = try context.fetch(request)
-            print(pokemonData?.count)
-            
+        
             //updateUI() -> fetchStrongestPokemon vai dar update na ui
         } catch {
             print(error)
@@ -62,15 +64,24 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
             let pokemon = pokemon
             print(pokemon.name!)
             let pokeType = (pokemon.mainType!.name!)
+            var strength = pokemon.mainType?.strength
+            let lastStrength = strength?.popLast()
             self.pokemonCard.pokemonImage.image = UIImage(data: pokemon.sprite!)
             self.pokemonCard.pokemonName.text = pokemon.name?.uppercased()
             self.pokemonCard.statusLabel.text = "What a \(weatherTypeToday!) day!!! \nYour \(pokemon.name!.uppercased()) is stronger!"
             
             self.pokemonCard.statusArrow.image = UIImage(named: "newDown")
             
-            for strength in pokemon.mainType!.strength! {
-                types.append("\(strength), ")
+            let count = strength?.count
+            
+            if pokemon.mainType?.name != "normal" {
+                for i in 0...count! - 1 {
+                    (i == count! - 1) ? types.append("\(strength![i]) ") : types.append("\(strength![i]), ")
+                }
             }
+            
+            types.append("and \(lastStrength!)")
+
             
             self.pokemonCard.advantageLabel.text = "It has an advantage against \n\(types) types!"
 
@@ -85,6 +96,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
             
             //UPDATES IN BACKGROUND
             view.backgroundColor = UIColor(named: "\(pokeType)Background")
+            settingsBtn.tintColor = UIColor(named: "\(pokeType)Highlight")
             initSKScene(type: pokeType)
             pokemonCard.setAccessibility()
         }
@@ -118,7 +130,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
   
                 choosenPokemon.sort(by: {$0.weight! < $1.weight!})
 //                print(choosenPokemon)
-                updateUI(pokemon: choosenPokemon[0])
+                updateUI(pokemon: choosenPokemon[1])
             }
         } catch {
             print(error)

@@ -7,16 +7,59 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Configuration View Controller-->
         <scene sceneID="y00-14-MpX">
             <objects>
-                <viewController id="IVY-DG-0fG" sceneMemberID="viewController">
+                <viewController id="IVY-DG-0fG" customClass="ConfigurationViewController" customModule="PokeWeather" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qDB-8i-n4G">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iiR-PB-lxk" customClass="SettingsCard" customModule="PokeWeather" customModuleProvider="target">
+                                <rect key="frame" x="22" y="198" width="370" height="500"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="370" id="WJ0-rj-aBJ"/>
+                                    <constraint firstAttribute="height" constant="500" id="Xf3-I9-vyk"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HjP-7Q-vWS">
+                                <rect key="frame" x="117" y="753" width="180" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="ICa-5I-iPs"/>
+                                    <constraint firstAttribute="height" constant="45" id="kb4-Nk-9aZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetButton:" destination="IVY-DG-0fG" eventType="touchUpInside" id="HxC-um-YTf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qw6-bD-fHz">
+                                <rect key="frame" x="41" y="101" width="140" height="40"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="34"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="30X-1X-bn2"/>
                         <color key="backgroundColor" red="0.0" green="0.62352941179999999" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="iiR-PB-lxk" firstAttribute="top" secondItem="qw6-bD-fHz" secondAttribute="bottom" constant="57" id="5PH-Xe-Wh0"/>
+                            <constraint firstItem="qw6-bD-fHz" firstAttribute="top" secondItem="30X-1X-bn2" secondAttribute="top" constant="57" id="D6s-3z-DtY"/>
+                            <constraint firstItem="HjP-7Q-vWS" firstAttribute="centerX" secondItem="qDB-8i-n4G" secondAttribute="centerX" id="JAT-hT-OZB"/>
+                            <constraint firstItem="iiR-PB-lxk" firstAttribute="centerX" secondItem="qDB-8i-n4G" secondAttribute="centerX" id="WIg-yP-6JV"/>
+                            <constraint firstItem="30X-1X-bn2" firstAttribute="bottom" secondItem="HjP-7Q-vWS" secondAttribute="bottom" constant="64" id="XI3-nU-urk"/>
+                            <constraint firstItem="qw6-bD-fHz" firstAttribute="leading" secondItem="30X-1X-bn2" secondAttribute="leading" constant="41" id="ZaM-JC-o0u"/>
+                            <constraint firstItem="iiR-PB-lxk" firstAttribute="centerY" secondItem="qDB-8i-n4G" secondAttribute="centerY" id="pp6-df-N9C"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="resetButton" destination="HjP-7Q-vWS" id="3YK-dN-3xG"/>
+                        <outlet property="settingsCard" destination="iiR-PB-lxk" id="gl2-Yx-wCO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bq8-ka-SLp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

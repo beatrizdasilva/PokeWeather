@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -36,7 +35,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UMM-Kj-eYk" customClass="TeamPokemonView" customModule="PokeWeather" customModuleProvider="target">
                                 <rect key="frame" x="30" y="313" width="354" height="395"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="354" id="4Bq-NN-Tn4"/>
                                     <constraint firstAttribute="height" constant="395" id="FJ4-L9-jjO"/>
@@ -207,8 +206,5 @@
         <image name="right" width="115.08999633789062" height="151.91000366210938"/>
         <image name="teamOff" width="25" height="25"/>
         <image name="teamOn" width="25" height="25"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

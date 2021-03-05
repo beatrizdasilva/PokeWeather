@@ -35,13 +35,13 @@ class InitialViewController: UIViewController {
         
         setupUI()
     }
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.destination is UITabBarController  {
-            let vc = segue.destination as? UITabBarController
-        }
-    }
-    
+//
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.destination is UITabBarController  {
+//            let vc = segue.destination as? UITabBarController
+//        }
+//    }
+//
     func setupUI() {
         let boldText = "Developed by: "
         let attrs = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 8)]
@@ -107,9 +107,13 @@ class InitialViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(increaseSuccess), name: Notification.Name(rawValue: "SUCCESS_OK"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(changeScreen), name: Notification.Name(rawValue: "SAVED_OK"), object: nil)
         
-        for i in 0...2 {
-            requestPokemonData(value: String(pokemonValues[i]))
-        }
+//        for i in 0...2 {
+//            requestPokemonData(value: String(pokemonValues[i]))
+//        }
+        
+        requestPokemonData(value: "articuno")
+        requestPokemonData(value: "squirtle")
+        requestPokemonData(value: "umbreon")
     }
     
     @IBAction func continueButtonPressed(_ sender: Any) {
@@ -217,8 +221,6 @@ class InitialViewController: UIViewController {
         newPokemon.number = Int64(pokemonData.id)
         newPokemon.sprite = pokemonImage
         newPokemon.weight = String(Float(pokemonData.weight) / 10)
-        
-        print(newPokemon.weight)
         
         newPokemon.mainType = (types![0]) //insert into a real table
         
