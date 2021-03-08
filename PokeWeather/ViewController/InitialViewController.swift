@@ -107,13 +107,9 @@ class InitialViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(increaseSuccess), name: Notification.Name(rawValue: "SUCCESS_OK"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(changeScreen), name: Notification.Name(rawValue: "SAVED_OK"), object: nil)
         
-//        for i in 0...2 {
-//            requestPokemonData(value: String(pokemonValues[i]))
-//        }
-        
-        requestPokemonData(value: "articuno")
-        requestPokemonData(value: "squirtle")
-        requestPokemonData(value: "umbreon")
+        for i in 0...2 {
+            requestPokemonData(value: String(pokemonValues[i]))
+        }
     }
     
     @IBAction func continueButtonPressed(_ sender: Any) {
