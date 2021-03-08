@@ -97,13 +97,19 @@ class TeamViewController: UIViewController {
         let strengthCount = strength.count
         let weaknessCount = weakness.count
         
-        for i in 0...strengthCount - 1 {
-            (i == strengthCount - 1) ? strenghtType.append("\(strength[i]) ") : strenghtType.append("\(strength[i]), ")
+        
+        if strength.count != 0 {
+            for i in 0...strengthCount - 1 {
+                (i == strengthCount - 1) ? strenghtType.append("\(strength[i]) ") : strenghtType.append("\(strength[i]), ")
+            }
         }
         
-        for i in 0...weaknessCount - 1 {
-            (i == weaknessCount - 1) ? weaknessType.append("\(weakness[i]) ") : weaknessType.append("\(weakness[i]), ")
+        if weakness.count != 0 {
+            for i in 0...weaknessCount - 1 {
+                (i == weaknessCount - 1) ? weaknessType.append("\(weakness[i]) ") : weaknessType.append("\(weakness[i]), ")
+            }
         }
+        
         
         weaknessType.append("and \(lastWeakness!)")
         strenghtType.append("and \(lastStrength!)")
