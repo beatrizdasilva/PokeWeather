@@ -26,9 +26,6 @@ class TeamViewController: UIViewController {
     @IBOutlet weak var btnLeft: UIButton!
     @IBOutlet weak var btnRight: UIButton!
     
-    var strenghtType = ""
-    var weaknessType = ""
-    
     // MARK: - Functions
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,6 +71,15 @@ class TeamViewController: UIViewController {
         thirdPokemonArrow.image = UIImage(named: "newDown")
         PokemonCard.pokemonArrowIndicator.image = UIImage(named: "newDown")
         
+        var strength = pokemonData![pokemonIndex].mainType!.strength!
+        var weakness = pokemonData![pokemonIndex].mainType!.weakness!
+        
+        let lastStrength = strength.popLast()
+        let lastWeakness = weakness.popLast()
+        
+        var strenghtType = ""
+        var weaknessType = ""
+        
         if pokemonData![pokemonIndex].mainType?.name == "fire" || pokemonData![pokemonIndex].mainType?.name == "grass" || pokemonData![pokemonIndex].mainType?.name == "ground" || pokemonData![pokemonIndex].mainType?.name == "normal" || pokemonData![pokemonIndex].mainType?.name == "rock" {
             dayType = "clear"
         } else if pokemonData![pokemonIndex].mainType?.name == "fairy" || pokemonData![pokemonIndex].mainType?.name == "fighting" || pokemonData![pokemonIndex].mainType?.name == "poison"{
@@ -88,15 +94,20 @@ class TeamViewController: UIViewController {
             dayType = "snowy"
         }
         
+        let strengthCount = strength.count
+        let weaknessCount = weakness.count
         
-        
-        for strength in pokemonData![pokemonIndex].mainType!.strength! {
-            strenghtType.append("\(strength), ")
+        for i in 0...strengthCount - 1 {
+            (i == strengthCount - 1) ? strenghtType.append("\(strength[i]) ") : strenghtType.append("\(strength[i]), ")
         }
         
-        for weakness in pokemonData![pokemonIndex].mainType!.weakness! {
-            weaknessType.append("\(weakness), ")
+        for i in 0...weaknessCount - 1 {
+            (i == weaknessCount - 1) ? weaknessType.append("\(weakness[i]) ") : weaknessType.append("\(weakness[i]), ")
         }
+        
+        weaknessType.append("and \(lastWeakness!)")
+        strenghtType.append("and \(lastStrength!)")
+        
         
         PokemonCard.pokemonDescription.text = "\(pokemonData![pokemonIndex].name!.uppercased()) is a \(pokemonData![pokemonIndex].mainType!.name!) Pokémon and \(dayType!) days makes it stronger.\n\nIts stronger against \(strenghtType) Pokémon, but it has a disadvantage for those of \(weaknessType) types!"
         
