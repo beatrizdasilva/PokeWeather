@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TpJ-tQ-Oya">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Initial View Controller-->
+        <scene sceneID="9ej-Bk-LAZ">
+            <objects>
+                <viewController storyboardIdentifier="MainScreen" id="TpJ-tQ-Oya" customClass="InitialViewController" customModule="PokeWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YeG-dj-kiz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kEy-eB-jVm" customClass="InitialScreenCurvedLabelView" customModule="PokeWeather" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="-11" width="414" height="340"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="340" id="guP-t6-lyS"/>
+                                    <constraint firstAttribute="width" constant="414" id="sQc-dB-1Tb"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developed by: Beatriz da Silva, Juliana Machado and Kauê Sales." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Zc-no-b5a">
+                                <rect key="frame" x="20" y="840" width="374" height="10"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="8"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Credits: PokeAPI and Free Code Camp weather API" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ADQ-4w-rsG">
+                                <rect key="frame" x="20" y="852.5" width="374" height="9.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="8"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="cYr-sb-OD1">
+                                <rect key="frame" x="0.0" y="419" width="414" height="216"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="9bv-HU-Wo3"/>
+                                    <constraint firstAttribute="width" constant="414" id="osg-nz-R40"/>
+                                </constraints>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="-2493032400">
+                                    <!--1922-01-01 11:00:00 +0000-->
+                                </date>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="662641200">
+                                    <!--2021-12-31 11:00:00 +0000-->
+                                </date>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter an important date for you" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQf-aI-ypV">
+                                <rect key="frame" x="71" y="375" width="272" height="24"/>
+                                <accessibility key="accessibilityConfiguration" label="Enter an important date for you">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MRX-6N-ij7" userLabel="continueButton">
+                                <rect key="frame" x="117" y="753" width="180" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="Azx-2Q-FKg"/>
+                                    <constraint firstAttribute="height" constant="45" id="dd2-0h-Fyz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="continueButtonPressed:" destination="TpJ-tQ-Oya" eventType="touchUpInside" id="jEr-LS-3bL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PXv-Eh-VKQ" userLabel="randomDate">
+                                <rect key="frame" x="117" y="692" width="180" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="KQu-mS-AQW"/>
+                                    <constraint firstAttribute="height" constant="45" id="hOA-Zn-0qv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
+                                <state key="normal" title="Random Date">
+                                    <color key="titleColor" red="0.0" green="0.62352941179999999" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="randomDateButtonPressed:" destination="TpJ-tQ-Oya" eventType="touchUpInside" id="3lu-tU-EAg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wAY-0l-acS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MRX-6N-ij7" firstAttribute="centerX" secondItem="YeG-dj-kiz" secondAttribute="centerX" id="6Em-kn-3jj"/>
+                            <constraint firstItem="PXv-Eh-VKQ" firstAttribute="top" secondItem="cYr-sb-OD1" secondAttribute="bottom" constant="57" id="EK3-c3-ZXk"/>
+                            <constraint firstItem="wAY-0l-acS" firstAttribute="trailing" secondItem="ADQ-4w-rsG" secondAttribute="trailing" constant="20" id="EmA-ER-gdA"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="MRX-6N-ij7" secondAttribute="bottom" constant="64" id="GPk-XF-ylM"/>
+                            <constraint firstItem="MRX-6N-ij7" firstAttribute="top" secondItem="PXv-Eh-VKQ" secondAttribute="bottom" constant="16" id="HX2-ju-Jjj"/>
+                            <constraint firstItem="2Zc-no-b5a" firstAttribute="leading" secondItem="wAY-0l-acS" secondAttribute="leading" constant="20" id="LCs-86-yWS"/>
+                            <constraint firstItem="rQf-aI-ypV" firstAttribute="top" secondItem="kEy-eB-jVm" secondAttribute="bottom" constant="46" id="OlH-Ty-mme"/>
+                            <constraint firstItem="ADQ-4w-rsG" firstAttribute="top" secondItem="2Zc-no-b5a" secondAttribute="bottom" constant="2" id="RXc-w6-S71"/>
+                            <constraint firstItem="kEy-eB-jVm" firstAttribute="top" secondItem="YeG-dj-kiz" secondAttribute="top" constant="-11" id="TjK-Jr-Bh8"/>
+                            <constraint firstItem="cYr-sb-OD1" firstAttribute="top" secondItem="rQf-aI-ypV" secondAttribute="bottom" constant="20" id="flY-pk-sbO"/>
+                            <constraint firstItem="PXv-Eh-VKQ" firstAttribute="centerX" secondItem="YeG-dj-kiz" secondAttribute="centerX" id="gP7-w4-HQ8"/>
+                            <constraint firstItem="ADQ-4w-rsG" firstAttribute="bottom" secondItem="wAY-0l-acS" secondAttribute="bottom" id="gVt-dZ-eOH"/>
+                            <constraint firstItem="cYr-sb-OD1" firstAttribute="leading" secondItem="wAY-0l-acS" secondAttribute="leading" id="hjM-Jx-ukH"/>
+                            <constraint firstItem="ADQ-4w-rsG" firstAttribute="leading" secondItem="wAY-0l-acS" secondAttribute="leading" constant="20" id="jVM-qc-Ls3"/>
+                            <constraint firstItem="rQf-aI-ypV" firstAttribute="centerX" secondItem="YeG-dj-kiz" secondAttribute="centerX" id="jvf-uh-Gtu"/>
+                            <constraint firstItem="wAY-0l-acS" firstAttribute="trailing" secondItem="2Zc-no-b5a" secondAttribute="trailing" constant="20" id="n1R-Qm-VgD"/>
+                            <constraint firstItem="kEy-eB-jVm" firstAttribute="leading" secondItem="wAY-0l-acS" secondAttribute="leading" id="pJp-k9-WLp"/>
+                            <constraint firstItem="cYr-sb-OD1" firstAttribute="trailing" secondItem="wAY-0l-acS" secondAttribute="trailing" id="r4F-8m-dD9"/>
+                            <constraint firstItem="kEy-eB-jVm" firstAttribute="trailing" secondItem="wAY-0l-acS" secondAttribute="trailing" id="z80-pV-rpa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="continueButton" destination="MRX-6N-ij7" id="J8L-OA-z2x"/>
+                        <outlet property="creditsLabel" destination="ADQ-4w-rsG" id="cRb-o8-z1R"/>
+                        <outlet property="curvedCard" destination="kEy-eB-jVm" id="uLf-d7-We9"/>
+                        <outlet property="datePicker" destination="cYr-sb-OD1" id="lfV-oe-AlJ"/>
+                        <outlet property="developerLabel" destination="2Zc-no-b5a" id="ytb-gZ-Alp"/>
+                        <outlet property="randomDateButton" destination="PXv-Eh-VKQ" id="xRd-N3-t8u"/>
+                        <segue destination="cXE-hO-1h1" kind="show" identifier="Navigation" id="4KV-wH-LmE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8eH-U5-AZS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="173.91304347826087" y="203.57142857142856"/>
+        </scene>
+        <!--Navigation-->
+        <scene sceneID="3xv-DW-0oR">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Navigation" id="cXE-hO-1h1" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="q2S-A1-tqy"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KQB-5I-h2F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="775" y="160"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

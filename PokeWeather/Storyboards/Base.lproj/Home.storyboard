@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jnY-h0-cCU">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="zXk-Jy-hzb">
+            <objects>
+                <navigationController storyboardIdentifier="home" id="jnY-h0-cCU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" tag="1" title="Home" image="homeOff" id="dzh-ZX-1NX">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="homeOn"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8Mi-ZF-jdh">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="1XS-qP-sHa" kind="relationship" relationship="rootViewController" id="gPQ-tM-qAN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3K5-Wq-DKq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-357" y="127"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="Chk-cN-8Kv">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" id="1XS-qP-sHa" customClass="HomeViewController" customModule="PokeWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cEO-YB-3Fe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ljz-Vg-huR" customClass="PokemonView" customModule="PokeWeather" customModuleProvider="target">
+                                <rect key="frame" x="47.5" y="354" width="319" height="329"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="XXq-4c-QJL">
+                                        <rect key="frame" x="104" y="111" width="112" height="106"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="319" id="7FW-PG-Ph5"/>
+                                    <constraint firstAttribute="height" constant="329" id="VXL-2y-rIS"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today your best pokemon is" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KM6-DM-cbH">
+                                <rect key="frame" x="59.5" y="187.5" width="295" height="26.5"/>
+                                <accessibility key="accessibilityConfiguration" label="Today your best pokemon is">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qmt-DA-w2q">
+                                <rect key="frame" x="37" y="66" width="50" height="50"/>
+                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                <accessibility key="accessibilityConfiguration" hint="Image representing the current weather">
+                                    <accessibilityTraits key="traits" image="YES" notEnabled="YES" updatesFrequently="YES"/>
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="5YF-LF-uQB"/>
+                                    <constraint firstAttribute="width" constant="50" id="lRT-gK-arv"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdE-MZ-pER">
+                                <rect key="frame" x="327" y="66" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="bYe-zL-zWl"/>
+                                    <constraint firstAttribute="height" constant="50" id="pK4-TO-JOh"/>
+                                </constraints>
+                                <state key="normal" image="settings"/>
+                                <connections>
+                                    <segue destination="51t-ud-FdL" kind="presentation" id="SOO-pd-4H2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qq3-3b-KDb"/>
+                        <color key="backgroundColor" red="0.66666666666666663" green="0.87058823529411766" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="rdE-MZ-pER" firstAttribute="top" secondItem="qq3-3b-KDb" secondAttribute="top" constant="22" id="2mN-y2-ggN"/>
+                            <constraint firstItem="Ljz-Vg-huR" firstAttribute="top" secondItem="KM6-DM-cbH" secondAttribute="bottom" constant="140" id="6sR-hX-zR5"/>
+                            <constraint firstItem="Ljz-Vg-huR" firstAttribute="centerX" secondItem="cEO-YB-3Fe" secondAttribute="centerX" id="HsN-vQ-BEw"/>
+                            <constraint firstItem="Qmt-DA-w2q" firstAttribute="top" secondItem="qq3-3b-KDb" secondAttribute="top" constant="22" id="V9G-iH-Z1c"/>
+                            <constraint firstItem="qq3-3b-KDb" firstAttribute="trailing" secondItem="rdE-MZ-pER" secondAttribute="trailing" constant="37" id="VgH-0T-Of6"/>
+                            <constraint firstItem="qq3-3b-KDb" firstAttribute="bottom" secondItem="Ljz-Vg-huR" secondAttribute="bottom" constant="130" id="fsL-Fx-gAz"/>
+                            <constraint firstItem="Qmt-DA-w2q" firstAttribute="leading" secondItem="qq3-3b-KDb" secondAttribute="leading" constant="37" id="gw3-er-FRj"/>
+                            <constraint firstItem="KM6-DM-cbH" firstAttribute="centerX" secondItem="cEO-YB-3Fe" secondAttribute="centerX" id="yN5-Zn-L7T"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="le8-rV-enD"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <connections>
+                        <outlet property="pokemonCard" destination="Ljz-Vg-huR" id="K2o-Ni-EZO"/>
+                        <outlet property="settingsBtn" destination="rdE-MZ-pER" id="FMp-uo-bCT"/>
+                        <outlet property="strongestPokemonLabel" destination="KM6-DM-cbH" id="Zj2-jC-dKp"/>
+                        <outlet property="weatherImageView" destination="Qmt-DA-w2q" id="Myi-wH-KhH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eeq-2e-oS3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="515.94202898550725" y="126.5625"/>
+        </scene>
+        <!--Configuration-->
+        <scene sceneID="nia-i5-0wf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Configuration" id="51t-ud-FdL" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="u9G-3P-gL6"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sch-66-fTF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1175" y="-117"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="homeOff" width="25" height="22.5"/>
+        <image name="homeOn" width="25" height="22.5"/>
+        <image name="settings" width="126.02999877929688" height="126.02999877929688"/>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

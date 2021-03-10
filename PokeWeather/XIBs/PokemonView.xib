@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="LoRes.otf">
+            <string>LoRes12OT-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PokemonView" customModule="PokeWeather" customModuleProvider="target">
+            <connections>
+                <outlet property="advantageLabel" destination="7vI-IQ-bhl" id="Q6y-Qa-Adf"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="1q7-zQ-ghB"/>
+                <outlet property="pokemonImage" destination="dV7-o0-rbS" id="dYl-iY-6WN"/>
+                <outlet property="pokemonName" destination="XdF-Xc-W8m" id="d3C-wo-FVA"/>
+                <outlet property="statusArrow" destination="Y0a-as-YnS" id="RR1-n3-fmW"/>
+                <outlet property="statusLabel" destination="4DD-Lp-GGf" id="ZbP-sZ-IZT"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="319" height="329"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dV7-o0-rbS" userLabel="pokemonImage">
+                    <rect key="frame" x="59.5" y="-100" width="200" height="200"/>
+                    <accessibility key="accessibilityConfiguration">
+                        <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
+                        <bool key="isElement" value="YES"/>
+                    </accessibility>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="GDU-la-Urv"/>
+                        <constraint firstAttribute="height" constant="200" id="GzM-nc-3Tf"/>
+                    </constraints>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HWZ-iE-6Od">
+                    <rect key="frame" x="120.5" y="110" width="78.5" height="37.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XdF-Xc-W8m" userLabel="pokemonName">
+                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="37.5"/>
+                            <fontDescription key="fontDescription" name="LoRes12OT-Bold" family="LoRes 12 OT" pointSize="30"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Y0a-as-YnS" userLabel="statusImage">
+                            <rect key="frame" x="10" y="0.0" width="68.5" height="37.5"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <accessibility key="accessibilityConfiguration">
+                                <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
+                                <bool key="isElement" value="YES"/>
+                            </accessibility>
+                            <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small" weight="ultraLight"/>
+                        </imageView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="37.5" id="6il-3U-NJj"/>
+                    </constraints>
+                </stackView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="middleTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4DD-Lp-GGf" userLabel="statusLabel">
+                    <rect key="frame" x="30" y="183.5" width="0.0" height="0.0"/>
+                    <accessibility key="accessibilityConfiguration">
+                        <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                    </accessibility>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="middleTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7vI-IQ-bhl" userLabel="advantageLabel">
+                    <rect key="frame" x="30" y="219.5" width="0.0" height="0.0"/>
+                    <accessibility key="accessibilityConfiguration">
+                        <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                    </accessibility>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="7vI-IQ-bhl" firstAttribute="top" secondItem="4DD-Lp-GGf" secondAttribute="bottom" constant="36" id="34d-mv-1h8"/>
+                <constraint firstItem="dV7-o0-rbS" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="7JY-LV-F3c"/>
+                <constraint firstItem="HWZ-iE-6Od" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="9g7-Nm-P3A"/>
+                <constraint firstItem="dV7-o0-rbS" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="-100" id="QbE-85-wdL"/>
+                <constraint firstItem="7vI-IQ-bhl" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="RA7-Bx-2VG"/>
+                <constraint firstItem="4DD-Lp-GGf" firstAttribute="top" secondItem="HWZ-iE-6Od" secondAttribute="bottom" constant="36" id="cFY-NV-CNo"/>
+                <constraint firstItem="HWZ-iE-6Od" firstAttribute="top" secondItem="dV7-o0-rbS" secondAttribute="bottom" constant="10" id="dFE-LG-ynE"/>
+                <constraint firstItem="4DD-Lp-GGf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="jF2-cF-kS5"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-425.36231884057975" y="183.81696428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
