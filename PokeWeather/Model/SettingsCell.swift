@@ -49,14 +49,50 @@ class SettingsCell: UITableViewCell {
     //MARK: Selectors
     
     @objc func handleSwitchAction(sender: UISwitch) {
-        if sender.isOn {
-            if sender.tag == 1 {
-                print("email ligado")
+//        if sender.isOn {
+//            if sender.tag == 1 {
+//                print("email ligado")
+//            }
+//
+//        }
+        
+        switch sender.tag {
+        case 1:
+            if sender.isOn {
+                UserDefaults.standard.setValue(true, forKey: "1")
+            } else {
+                UserDefaults.standard.setValue(false, forKey: "1")
             }
-        } else {
-            if sender.tag == 1 {
-                print("email desligado")
+            
+        case 2:
+            if sender.isOn {
+                UserDefaults.standard.setValue(true, forKey: "2")
+            } else {
+                UserDefaults.standard.setValue(false, forKey: "2")
             }
+            
+        case 3:
+            if sender.isOn {
+                UserDefaults.standard.setValue(true, forKey: "3")
+            } else {
+                UserDefaults.standard.setValue(false, forKey: "3")
+            }
+            
+        case 4:
+            if sender.isOn {
+                UserDefaults.standard.setValue(true, forKey: "4")
+            } else {
+                UserDefaults.standard.setValue(false, forKey: "4")
+            }
+            
+        case 5:
+            if sender.isOn {
+                UserDefaults.standard.setValue(true, forKey: "5")
+            } else {
+                UserDefaults.standard.setValue(false, forKey: "5")
+            }
+        default:
+            print("error")
         }
     }
     

@@ -33,7 +33,7 @@ enum SocialSection: Int, CaseIterable, SectionType {
     var id: Int {
         switch self {
         case .github:
-            return 4
+            return 5
         }
     }
     
@@ -41,8 +41,9 @@ enum SocialSection: Int, CaseIterable, SectionType {
     var containsSwitch: Bool {
         switch self {
         case .github: return false
-    }}
-//    var notificationSwitch: Bool { return false }
+        }
+        
+    }
     
     case github
     
@@ -114,13 +115,6 @@ enum CommunicationSettings: Int, CaseIterable, SectionType {
         switch self {
         case .notifications: return true
     }}
-    
-//    var notificationSwitch: Bool {
-//        switch self {
-//        case .email: return false
-//        case .notifications: return true
-//        case .reportCrashes: return false
-//    }}
     
     case notifications
 
