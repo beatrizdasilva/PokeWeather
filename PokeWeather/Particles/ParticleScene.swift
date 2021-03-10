@@ -13,13 +13,21 @@ class ParticleScene: SKScene {
         super.didMove(to: view)
     }
     
+    
+    
     //starting from above -50, from below -1920, from middle /2.
     func setupParticleEmitter(type: String) {
+        var particleEmitter = SKEmitterNode()
         if type == "water" || type == "fire" || type == "bug" || type == "dragon" || type == "ghost" || type == "grass" || type == "ice" || type == "psychic" || type == "dark" || type == "electric" {
-            let particleEmitter = SKEmitterNode(fileNamed: "\(type)Particles")!
-            particleEmitter.position = CGPoint(x: size.width/2, y: size.height - 50)
-            addChild(particleEmitter)
+             particleEmitter = SKEmitterNode(fileNamed: "\(type)Particles")!
+        } else {
+             particleEmitter = SKEmitterNode(fileNamed: "waterParticles")!
         }
+        
+        
+        particleEmitter.position = CGPoint(x: size.width/2, y: size.height - 50)
+        addChild(particleEmitter)
+        
         
     }
 }
