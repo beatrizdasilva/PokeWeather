@@ -36,6 +36,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
         
         self.navigationController?.navigationBar.isHidden = true
         self.tabBarController?.tabBar.backgroundColor = .white
+        self.tabBarController?.tabBar.isHidden = true
         pokemonCard.layer.cornerRadius = pokemonCard.frame.height / 2
         strongestPokemonLabel.layer.shadowRadius = 10
         
@@ -159,7 +160,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
         
         print("\(long) | \(lat)")
         
-        if let url = URL(string: "https://fcc-weather-api.glitch.me/api/current?lat=\(lat)&lon=\(long)") {
+        if let url = URL(string: "http://api.openweathermap.org/data/2.5/weather?lat=\(lat)&lon=\(long)&appid=1707f41b47f7b05fe8a5621438c83094") {
             URLSession.shared.dataTask(with: url) { [self] data, response, error in
                 if let data = data {
                     do {
@@ -191,6 +192,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
                                 }
                                 
                                 fetchStrongestPokemon()
+                                self.tabBarController?.tabBar.isHidden = false
                             }
                             
                             UserDefaults.standard.setValue("\(res.weather[0].main)", forKey: "currentWeather")
@@ -200,6 +202,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
                         
                     } catch {
                         print(error)
+                        updateWeatherData()
                     }
                 }
                 

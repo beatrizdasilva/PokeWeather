@@ -16,18 +16,10 @@ class ConfigurationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        testLabel.text = "teste"
-        
-        
         resetButton.layer.cornerRadius = 20
         resetButton.layer.borderWidth = 2
         resetButton.layer.borderColor = CGColor(red: 1, green: 1, blue: 1, alpha: 1)
-        //resetButton.layer.backgroundColor = CGColor(red: 3/255, green: 202/255, blue: 188/255, alpha: 1.0)
-        
         settingsCard.layer.cornerRadius = 5
-    
-
-        // Do any additional setup after loading the view.
         
         navigationItem.title = "Settings"
     }
@@ -41,14 +33,5 @@ class ConfigurationViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
